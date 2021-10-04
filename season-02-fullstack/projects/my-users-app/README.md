@@ -1,8 +1,10 @@
 # PROJECT My_User_App
 Have to:
+    
     1) Contains > CLASS User with Methods such as:
         I. create()
                 ==> Have to:
+                        
                         1) Takes as INPUT > USER INFO which contained:
                                                                 - firstname
                                                                 - lastname
