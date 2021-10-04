@@ -79,4 +79,13 @@ Have to:
         
         ==> Контролирует работу приложения
 
+# TOTAL FILES
+1) views/index.html > Contains VIEW | USER INTERFACE;
+2) app.rb           > Contains some logic ...;
+3) my_user_model.rb > Contains Class User and it's Methods;
+                    > Contains SQL-Scricpt
+4) db.sql           > Contains DataBase;
+5) README.md        > Contains all necessary info about > PROJECT.
+
+
 # Lust Update: 22:26  16/09/2021
