@@ -2,7 +2,6 @@
 It is implementation of the famous Game > Mastermind
 
 # Info about Mastermind
-<pre>
 1) Consist of 8 pieces of different colors<br/>
 <pre>
                     ==> Pieces will be :
