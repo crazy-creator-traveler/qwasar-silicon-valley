@@ -2,14 +2,13 @@
 It is implementation of the famous Game > Mastermind
 
 # Info about Mastermind
-1) Consist of 8 pieces of different colors
-
+1) Consist of 8 pieces of different colors<br/>
                     ==> Pieces will be :
                                         0, 1, 2, 3, 4, 5, 6, 7
 
 2) Secret Code > Consist of 4 distinct pieces 
 
-3) CodeBreaker has > 10 Attempts (By default)
+3) CodeBreaker has > 10 Attempts (By default)<br/>
                     ==> To FIND the Secret Code.
 
                     ==> After each Input
@@ -28,8 +27,8 @@ It is implementation of the famous Game > Mastermind
                             ==> And Game STOPS.
 
 # Game Instruction
-Secret Code > Can be:
-            1) Only digits from 0-7.
+Secret Code > Can be: <br/>
+            1) Only digits from 0-7;
             2) Only 4 Different digits.
 
 Attempts > Can be from 1-99 !
