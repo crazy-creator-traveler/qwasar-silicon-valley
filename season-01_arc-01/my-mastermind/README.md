@@ -44,10 +44,10 @@ Attempts > Can be from 1-99 !
             Secret Code: 5432 (Generated random)
             Attempts   : 10   (By default)</pre>
     II) Game Starts
-# 2) The second way > To run with User Settings > For the Secret Code
-    I)./my_mastermind -c "1234"
+<h2>2) The second way > To run with User Settings > For the Secret Code</h2>
+    I)./my_mastermind -c "1234"</br><pre>
             Secret Code: 1234
-            Attempts   : 10 (By default)
+            Attempts   : 10 (By default)</pre>
     II) Game Starts
 
 # 3) The third way > To run with User Settings > For the Attempts.
