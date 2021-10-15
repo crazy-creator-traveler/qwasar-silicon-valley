@@ -3,6 +3,7 @@ It is implementation of the famous Game > Mastermind
 
 # Info about Mastermind
 1) Consist of 8 pieces of different colors
+
                     ==> Pieces will be :
                                         0, 1, 2, 3, 4, 5, 6, 7
 
