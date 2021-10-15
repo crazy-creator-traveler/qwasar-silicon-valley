@@ -4,12 +4,15 @@ It is implementation of the famous Game > Mastermind
 # Info about Mastermind
 <pre>
 1) Consist of 8 pieces of different colors<br/>
+<pre>
                     ==> Pieces will be :
-                                        0, 1, 2, 3, 4, 5, 6, 7
+                                        0, 1, 2, 3, 4, 5, 6, 7 
+</pre>
 
 2) Secret Code > Consist of 4 distinct pieces 
 
-3) CodeBreaker has > 10 Attempts (By default)<br/>
+3) CodeBreaker has > 10 Attempts (By default)<br/> 
+<pre> 
                     ==> To FIND the Secret Code.
 
                     ==> After each Input
@@ -25,7 +28,7 @@ It is implementation of the famous Game > Mastermind
 
                     ==> If CodeBreaker > Find the Secret Code
                         ==> He wins
-                            ==> And Game STOPS.
+                            ==> And Game STOPS. 
 </pre>
 # Game Instruction
 Secret Code > Can be: <br/>
