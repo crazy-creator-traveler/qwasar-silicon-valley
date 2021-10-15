@@ -39,7 +39,7 @@ Attempts > Can be from 1-99 !
 
 
 # Instructions to Run the Program:
-# 1) The first way > To run with Default parameters
+<h1>1) The first way > To run with Default parameters</h1>
     I)./my_mastermind
             Secret Code: 5432 (Generated random)
             Attempts   : 10   (By default)
