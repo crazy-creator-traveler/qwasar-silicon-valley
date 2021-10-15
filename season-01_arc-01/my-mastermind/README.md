@@ -29,6 +29,7 @@ It is implementation of the famous Game > Mastermind
                         ==> He wins
                             ==> And Game STOPS. 
 </pre>
+
 # Game Instruction
 Secret Code > Can be:</br>
             1) Only digits from 0-7;</br>
@@ -36,7 +37,6 @@ Secret Code > Can be:</br>
 
 Attempts > Can be from 1-99 !
 (Since I think that there should be a maximum allowable attempts and this is 99).
-
 
 # Instructions to Run the Program:
 <h2>1) The first way > To run with Default parameters</h2>
