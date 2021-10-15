@@ -39,10 +39,10 @@ Attempts > Can be from 1-99 !
 
 
 # Instructions to Run the Program:
-<h1>1) The first way > To run with Default parameters</h1>
-    I)./my_mastermind
+<h2>1) The first way > To run with Default parameters</h2>
+    I)./my_mastermind</br><pre>
             Secret Code: 5432 (Generated random)
-            Attempts   : 10   (By default)
+            Attempts   : 10   (By default)</pre>
     II) Game Starts
 # 2) The second way > To run with User Settings > For the Secret Code
     I)./my_mastermind -c "1234"
