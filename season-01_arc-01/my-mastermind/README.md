@@ -2,6 +2,7 @@
 It is implementation of the famous Game > Mastermind
 
 # Info about Mastermind
+<pre>
 1) Consist of 8 pieces of different colors<br/>
                     ==> Pieces will be :
                                         0, 1, 2, 3, 4, 5, 6, 7
@@ -25,7 +26,7 @@ It is implementation of the famous Game > Mastermind
                     ==> If CodeBreaker > Find the Secret Code
                         ==> He wins
                             ==> And Game STOPS.
-
+</pre>
 # Game Instruction
 Secret Code > Can be: <br/>
             1) Only digits from 0-7;
