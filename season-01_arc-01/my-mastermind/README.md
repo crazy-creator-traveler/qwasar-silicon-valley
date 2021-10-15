@@ -3,16 +3,14 @@ It is implementation of the famous Game > Mastermind
 
 # Info about Mastermind
 1) Consist of 8 pieces of different colors<br/>
-<pre>
-                    ==> Pieces will be :
+<pre>               ==> Pieces will be :
                                         0, 1, 2, 3, 4, 5, 6, 7 
 </pre>
 
 2) Secret Code > Consist of 4 distinct pieces 
 
 3) CodeBreaker has > 10 Attempts (By default)<br/> 
-<pre> 
-                    ==> To FIND the Secret Code.
+<pre>               ==> To FIND the Secret Code.
 
                     ==> After each Input
                         ==> Game indicates to the CodeBreaker
