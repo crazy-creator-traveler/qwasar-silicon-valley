@@ -50,11 +50,11 @@ Attempts > Can be from 1-99 !
             Attempts   : 10 (By default)</pre>
     II) Game Starts
 
-# 3) The third way > To run with User Settings > For the Attempts.
-    I)./my_mastermind -t "20"
+<h2>3) The third way > To run with User Settings > For the Attempts.</h2>
+    I)./my_mastermind -t "20"</br><pre>
             Secret Code: 5432 (Generated Random)
-            Attempts   : 20
+            Attempts   : 20</pre>
     II) Game Starts
 
-# NOTE: 
+<h3>NOTE:</h3> 
 You can't run the game with User Settings > For the Secret Code && Attempts at the same time !
