@@ -1,0 +1,5 @@
+# Object Files
+*.o
+
+# Compiled File
+my_mastermind
