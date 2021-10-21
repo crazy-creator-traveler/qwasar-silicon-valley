@@ -8,8 +8,8 @@ def main
     firstname = "Sultan"
     lastname  = "Kyzyltau"
     age       =  22
-    email     = "kyzyltau.sultann@gmail.com"
-    password  = "Kyzyltau777"
+    email     = "kyzyltau.sultan@gmail.com"
+    password  = "my_password"
         
 # TEST-1 > Creating New User
     puts("* * * * * * * * * * TEST-1. Creating New User * * * * * * * * * *")
@@ -28,7 +28,7 @@ def main
 
 # TEST-4 > Updating User-Data with ID > 1
     puts("* * * * * * * * * * TEST-4. Updating User-Data with ID > 1 * * * * * * * * * *")
-    user_data.update(1, :password, "Sultan777")
+    user_data.update(1, :password, "your_password")
     p(user_data.get(1)); puts("\n\n")
 
 # TEST-5 > DESTROY User-Data with ID > 1
