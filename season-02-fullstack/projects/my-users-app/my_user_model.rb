@@ -1,5 +1,5 @@
 =begin
-        Main Program Code
+        Main Program Code of the Model-Block
 
 N O T E:
     All necessary info contained in README.md
@@ -73,10 +73,9 @@ class User
                     # p(index[:email])
                     if(user_info[:email] == index[:email])
                         return $EXIT_FAILURE
-                    else
-                        return $EXIT_SUCCESS
                     end
                 end
+                return $EXIT_SUCCESS    
             end
     end
 
@@ -97,7 +96,7 @@ class User
                 if(data.class == Array)
                     puts("Successfullly created new user!\n#{user_info}")
                 else
-                    puts("User wasn't created !")
+                    puts("ERROR > User wasn't created !")
                 end
         else
             puts("This user already exists in the Database!\n#{user_info}")
@@ -113,7 +112,7 @@ class User
             if(rows.any?) # any? > ?
                 rows = _initialize(rows[0])
             else
-                puts("User with ID = #{uniq_user_id} > Doesn't exist !")
+                # puts("User with ID = #{uniq_user_id} > Doesn't exist !")
                 return nil
             end
     end
@@ -129,42 +128,71 @@ class User
                     rows = _initialize(index)
                 end
             else
-                nil
+                # puts("Users Doesn't exist !")
+                return nil
             end
     end
 
     def update(uniq_user_id, attributes, value)
-        data = self.get(uniq_user_id)
-
-        query = <<-SQL
-                    UPDATE #{$tablename}
-                    SET #{attributes} = '#{value}'
-                    WHERE 
-                        id = #{uniq_user_id}
-                SQL
-        # puts query
-        ConnectionSqlite.new.execute(query)
-
-        if(data[attributes] == value)
-            puts("You have added old data for > #{attributes}: #{value}")
+        if(self.get(uniq_user_id) == nil)
+            puts("User with ID = #{uniq_user_id} > Doesn't exist !")
+            return nil
         else
-            puts("Data updated successfully!")
+            data = self.get(uniq_user_id)
+
+            query = <<-SQL
+                        UPDATE #{$tablename}
+                        SET #{attributes} = '#{value}'
+                        WHERE 
+                            id = #{uniq_user_id}
+                    SQL
+            # puts query
+            ConnectionSqlite.new.execute(query)
+
+            if(data[attributes] == value)
+                puts("You have added old data for > #{attributes}: #{value}")
+            else
+                puts("Data updated successfully!")
+            end
         end
     end
 
     def destroy(uniq_user_id)
-        query = <<-SQL
-                    DELETE FROM #{$tablename}
-                    WHERE 
-                        id = #{uniq_user_id}
-                SQL
-        ConnectionSqlite.new.execute(query)
+        if(self.get(uniq_user_id) == nil)
+            puts("User with ID = #{uniq_user_id} > Doesn't exist! There is nothing to delete !")
+            return nil
+        else
+            query = <<-SQL
+                        DELETE FROM #{$tablename}
+                        WHERE 
+                            id = #{uniq_user_id}
+                    SQL
+            ConnectionSqlite.new.execute(query)
+            data = self.get(uniq_user_id)
+            if(data == nil)
+                puts("User has been successfully deleted!")
+                return nil
+            else
+                puts("ERROR > User has not been deleted!")
+            end
+        end
     end
 
     def destroy_all
-        query = <<-SQL
-                    DELETE FROM #{$tablename}
-                SQL
-        ConnectionSqlite.new.execute(query)
+        if(self.all == nil)
+            puts("Users does't exist! There is nothing to delete !")
+        else
+            query = <<-SQL
+                        DELETE FROM #{$tablename}
+                    SQL
+            ConnectionSqlite.new.execute(query)
+            data = self.all
+                if(data == nil)
+                    puts("Users have been deleted successfully!")
+                    return nil
+                else
+                    puts("ERROR > Users have not been deleted!!")
+                end
+        end
     end
 end
