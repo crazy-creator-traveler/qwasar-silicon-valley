@@ -13,7 +13,7 @@ def main
         
 # TEST-1 > Creating New User
     puts("* * * * * * * * * * TEST-1. Creating New User * * * * * * * * * *")
-    new_user = User.new(); # Waiting array-data 
+    new_user = User.new()
     new_user.create(firstname: firstname, lastname: lastname, age: age, email: email, password: password)     
     puts("\n\n")
     
