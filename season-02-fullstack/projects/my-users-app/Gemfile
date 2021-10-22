@@ -1,0 +1,14 @@
+=begin
+    Gemfile > Contains all the necessary GEMS for this Project !
+
+NOTE:
+    - Command:
+        bundle install 
+                    ==> To install all the necessary Gems
+=end
+
+source "https://rubygems.org"
+
+gem "sqlite3"
+gem "sinatra"
+gem "thin" # Web-Server > For our Project! We can use another such as: -puma
