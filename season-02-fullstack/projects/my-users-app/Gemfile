@@ -11,4 +11,7 @@ source "https://rubygems.org"
 
 gem "sqlite3"
 gem "sinatra"
-gem "thin" # Web-Server > For our Project! We can use another such as: -puma
+
+# Web-Servers
+gem "thin" # Will be used for our Project! 
+gem "puma"
