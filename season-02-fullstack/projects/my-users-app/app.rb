@@ -21,7 +21,7 @@ set :port, 8090
 # set :bind, '0.0.0.0'
 enable :sessions # To use SESSIONS
 
-post '/users' do # Creating New User
+post '/users' do # For Creating a New User.
     # p(params)
     if(params.empty?)
         puts("You didn't enter any data!")
@@ -32,17 +32,21 @@ post '/users' do # Creating New User
     end    
 end
 
-get '/users' do # Displaying All Users-Data > Except their password!
+get '/users' do # For Displaying All Users-Data > Except their password!
     user = User.new()
     data = user.all # "#{data}"
                     # puts("#{data}") # Will not work! We can display in Browser OR Terminal! But not in both same time !
-    data.collect do |index|
-        data = index.except(:password) 
-        "#{data}"
+    index = 0
+    data.collect do |user|
+        data[index] = user.except(:password) 
+        index += 1
     end
+    
+    message = "Below is information about users:\n#{data}"
+    return message
 end
 
-post '/sign_in' do
+post '/sign_in' do # For Sign in to the system using: -email && -password.
     #"#{params[:email]}"
     users = User.new()
     users = users.all
@@ -51,30 +55,46 @@ post '/sign_in' do
         if(user[:email] == params[:email] && user[:password] == params[:password])
             # p(user[:id]);   # p(session[:user_id])
             session[:user_id] = user[:id] # puts(ssession)
-            message = "Welcome #{user[:firstname]}!" 
-            
+
+            message = "Welcome #{user[:firstname]}!"          
             return message
         else
-            session[:user_id] = nil; 
-            # puts("User not exist") # To display in Terminal
+            message = "User with Email: #{params[:email]} && Password: #{params[:password]} > Not exist!\nPlease check that you entered the correct data."
+            return message
         end
     end 
 end
 
-put '/users' do
+put '/users' do # For Changing the User's password.
     if(session[:user_id])
         user = User.new()
         user = user.get(session[:user_id]) # p(session[:user_id])
-        "User #{user[:firstname]} is already Authorized !"
+        user[:password] = params[:password]
+
+        message = "Password updated successfully!\n#{user}"
+        return message 
     else
-        "User #{user[:firstname]} isn't Authorized !"
+        message = "You are not Authorized! Please Sign in first."
+        return message
     end
 end
 
-delete '/sign_out' do
-    # code...
+delete '/sign_out' do # For Sign out from the system.
+    if(session[:user_id])
+        # p(session)
+        if(session.clear.empty?) # session.clear > To Destroy Session
+            message = "You have successfully logged out!"
+            return message
+        else
+            message = "ERROR > You are not logged out! Please try again after a few minutes."
+            return message
+        end
+    else
+        message = "You are not Authorized!"
+        return message
+    end
 end
 
-delete '/users' do
+delete '/users' do # For ...
     # code...
 end
