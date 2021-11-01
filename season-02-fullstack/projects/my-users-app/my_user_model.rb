@@ -41,7 +41,7 @@ class ConnectionSqlite
         SQL
     end
 
-    def execute(query)
+    def execute(query) # Check
         # p(query)
         self.get_connection().execute(query)
     end
@@ -69,13 +69,13 @@ class User
             if(data == nil)
                 return $EXIT_SUCCESS
             else
-                data.collect do |index|
+                data.collect do |index| # MB Rewrite
                     # p(index[:email])
                     if(user_info[:email] == index[:email])
                         return $EXIT_FAILURE
                     end
                 end
-                return $EXIT_SUCCESS    
+            return $EXIT_SUCCESS
             end
     end
 
@@ -92,14 +92,20 @@ class User
                         );
                     SQL
             # puts query
-            data = ConnectionSqlite.new.execute(query)
+            data = ConnectionSqlite.new.execute(query) # MB Rewrite...
                 if(data.class == Array)
-                    puts("Successfullly created new user!\n#{user_info}")
+                    puts("Successfullly created a new user!\n#{user_info}")
+                    result = {:value=> true, :description=> "Successfullly created a new user!\n#{user_info}"}
+                return result
                 else
                     puts("ERROR > User wasn't created !")
+                    result = {:value=> false, :description=> "ERROR > User wasn't created !"}
+                return result
                 end
         else
             puts("This user already exists in the Database!\n#{user_info}")
+            result = {:value=> false, :description=> "This user already exists in the Database!\n#{user_info}"}
+        return result
         end 
     end
 
@@ -110,10 +116,11 @@ class User
         # p(query)
         rows = ConnectionSqlite.new.execute(query) # p(rows[0])
             if(rows.any?) # any? > ?
-                rows = _initialize(rows[0])
+                rows = _initialize(rows[0]) # MB Rewrite...
+            return rows
             else
                 # puts("User with ID = #{uniq_user_id} > Doesn't exist !")
-                return nil
+            return nil
             end
     end
 
@@ -126,17 +133,17 @@ class User
             if(rows.any?)
                 rows.collect do |index|
                     rows = _initialize(index)
-                end
+                end # Returns New Array of Hash > rows
             else
                 # puts("Users Doesn't exist !")
-                return nil
+            return nil
             end
     end
 
     def update(uniq_user_id, attributes, value)
         if(self.get(uniq_user_id) == nil)
             puts("User with ID = #{uniq_user_id} > Doesn't exist !")
-            return nil
+        return nil
         else
             data = self.get(uniq_user_id)
 
@@ -147,52 +154,57 @@ class User
                             id = #{uniq_user_id}
                     SQL
             # puts query
-            ConnectionSqlite.new.execute(query)
+            ConnectionSqlite.new.execute(query) # CHECK
 
             if(data[attributes] == value)
                 puts("You have added old data for > #{attributes}: #{value}")
+            return false
             else
                 puts("Data updated successfully!")
+            return true
             end
         end
-    end
+    end # MB Rewrite > Returns Array of Hash.
 
     def destroy(uniq_user_id)
         if(self.get(uniq_user_id) == nil)
             puts("User with ID = #{uniq_user_id} > Doesn't exist! There is nothing to delete !")
-            return nil
+        return nil
         else
             query = <<-SQL
                         DELETE FROM #{$tablename}
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            ConnectionSqlite.new.execute(query)
+            ConnectionSqlite.new.execute(query) # CHECK
             data = self.get(uniq_user_id)
-            if(data == nil)
-                puts("User has been successfully deleted!")
-                return nil
-            else
-                puts("ERROR > User has not been deleted!")
-            end
+                if(data == nil)
+                    puts("User has been successfully deleted!")
+                return true
+                else
+                    puts("ERROR > User has not been deleted!")
+                return false
+                end
         end
-    end
+    end # MB Rewrite > Returns Array of Hash.
 
     def destroy_all
         if(self.all == nil)
             puts("Users does't exist! There is nothing to delete !")
+        return nil
         else
             query = <<-SQL
                         DELETE FROM #{$tablename}
                     SQL
-            ConnectionSqlite.new.execute(query)
+            ConnectionSqlite.new.execute(query) # CHECK
             data = self.all
                 if(data == nil)
                     puts("Users have been deleted successfully!")
-                    return nil
+                return true
                 else
                     puts("ERROR > Users have not been deleted!!")
+                return false
                 end
         end
     end
-end
+end # MB Rewrite > Returns Array of Hash.
