@@ -31,5 +31,10 @@ curl -X DELETE -b cookies.txt -i $HOST/sign_out
 > cookies.txt # To Delete the contents of the file.
 # rm cookies.txt
 
-# TEST-6 > ...
+# TEST-6 > Sign out from the system > Provided that the user is already in the system  &&  Destroying the current User.
 echo -e "\n\n* * * * * * * * * * * * * * * TEST-6 * * * * * * * * * * * * * * *"
+curl -X POST -c cookies.txt -i $HOST/sign_in -d "email=my_email@gmail.com" -d "password=Monkey"
+echo -e "\n\n"
+curl -X DELETE -b cookies.txt -i $HOST/users
+> cookies.txt
+echo
