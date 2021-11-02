@@ -25,10 +25,19 @@ post '/users' do # For Creating a New User.
     # p(params)
     if(params.empty?)
         puts("You didn't enter any data!")
-        return nil
+        
+        message = "You didn't enter any data!"
+    return message
     else
         user = User.new()
-        user.create(params) # puts(params)
+        result = user.create(params) # puts(params)   
+            if(result[:value])
+                message = result[:description]
+            return message
+            else
+                message = result[:description]
+            return message 
+            end
     end    
 end
 
@@ -36,46 +45,59 @@ get '/users' do # For Displaying All Users-Data > Except their password!
     user = User.new()
     data = user.all # "#{data}"
                     # puts("#{data}") # Will not work! We can display in Browser OR Terminal! But not in both same time !
-    index = 0
-    data.collect do |user|
-        data[index] = user.except(:password) 
-        index += 1
-    end
-    
-    message = "Below is information about users:\n#{data}"
-    return message
+        if(data == nil)
+            message = "Users Doesn't exist !"
+        return message    
+        else
+            index = 0
+            data.collect do |user|
+                data[index] = user.except(:password) 
+                index += 1
+            end
+            
+            message = "Below is information about users:\n#{data}"
+        return message
+        end
 end
 
 post '/sign_in' do # For Sign in to the system using: -email && -password.
     #"#{params[:email]}"
     users = User.new()
     users = users.all
-
-    users.each do |user|
-        if(user[:email] == params[:email] && user[:password] == params[:password])
-            # p(user[:id]);   # p(session[:user_id])
-            session[:user_id] = user[:id] # puts(ssession)
-
-            message = "Welcome #{user[:firstname]}!"          
-            return message
+        if(users == nil)
+            message = "User with Email: #{params[:email]} && Password: #{params[:password]} > Not exist! Please create a user account first."
+        return message
         else
-            message = "User with Email: #{params[:email]} && Password: #{params[:password]} > Not exist!\nPlease check that you entered the correct data."
-            return message
+            message = ""
+            users.each do |user|
+                if(user[:email] == params[:email] && user[:password] == params[:password])
+                    # p(user[:id]);   # p(session[:user_id])
+                    session[:user_id] = user[:id] # puts(ssession)
+
+                    message = "Welcome #{user[:firstname]}!"          
+                return message
+                else
+                    message = "User with Email: #{params[:email]} && Password: #{params[:password]} > Not exist!\nPlease check that you entered the correct data."
+                end
+            end
+        return message
         end
-    end 
 end
 
 put '/users' do # For Changing the User's password.
     if(session[:user_id])
         user = User.new()
-        user = user.get(session[:user_id]) # p(session[:user_id])
-        user[:password] = params[:password]
-
-        message = "Password updated successfully!\n#{user}"
-        return message 
+        user = user.update(session[:user_id], :password, params[:password]) # p(session[:user_id])
+            if(user)
+                message = "Password updated successfully!\n"
+            return message
+            else
+                message = "ERROR > Failed to update your account! Please try again after a few minutes."
+            return message
+            end
     else
         message = "You are not Authorized! Please Sign in first."
-        return message
+    return message
     end
 end
 
@@ -84,17 +106,30 @@ delete '/sign_out' do # For Sign out from the system.
         # p(session)
         if(session.clear.empty?) # session.clear > To Destroy Session
             message = "You have successfully logged out!"
-            return message
+        return message
         else
             message = "ERROR > You are not logged out! Please try again after a few minutes."
-            return message
+        return message
         end
     else
         message = "You are not Authorized!"
-        return message
+    return message
     end
 end
 
-delete '/users' do # For ...
-    # code...
+delete '/users' do # For Sign out from the system && Destroying the current User. 
+    if(session[:user_id])
+        user = User.new()
+        data = user.destroy(session[:user_id])
+            if(data && session.clear.empty?)
+                message = "You have successfully deleted your account!"
+            return message
+            else
+                message = "ERROR > Failed to delete your account! Please try again after a few minutes."
+            return message
+            end
+    else
+        message = "You are not Authorized!"
+    return message
+    end
 end
