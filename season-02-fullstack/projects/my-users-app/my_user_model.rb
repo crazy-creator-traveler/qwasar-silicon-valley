@@ -8,8 +8,8 @@ We are using Engineering + Re-Engineering
 =end
 require "sqlite3"
 
-$EXIT_SUCCESS = 0
-$EXIT_FAILURE = 1
+EXIT_SUCCESS = 0
+EXIT_FAILURE = 1
 
 $db_filename = "my_first_app.db"
 $tablename   = "users"
@@ -28,11 +28,16 @@ class ConnectionSqlite
         SQL
     end
 
-    def db_connection()
-        @db = SQLite3::Database.open($db_filename) # If this Database doesn't exist > It will be automatically created!
-        self.create_db(@db)
-        # db.execute(query) # > For construction > ConnectionSqlite.new.db_connection(query)    
-    return @db
+    def db_connection(query)
+            @db = SQLite3::Database.open($db_filename) # If this Database doesn't exist > It will be automatically created!
+            data = @db.execute(query)
+        rescue SQLite3::Exception => error_message
+            # puts("ERROR > #{error_message}") 
+            self.create_db(@db)
+            retry
+        ensure
+            @db.close # p(@db.closed?) > Returns: True or False
+    return data
     end
 end
 
@@ -54,17 +59,17 @@ class User
     end
 
     def check_duplicates(user_info)
-        data = self.all # p(user_info[:email]); puts # p(data)
+        data = self.all # p(user_info[:email])
             if(data == nil)
-                return $EXIT_SUCCESS
+                return EXIT_SUCCESS
             else
-                data.collect do |index| # MB Rewrite
+                data.each do |index|
                     # p(index[:email])
                     if(user_info[:email] == index[:email])
-                        return $EXIT_FAILURE
+                        return EXIT_FAILURE
                     end
                 end
-            return $EXIT_SUCCESS
+            return EXIT_SUCCESS
             end
     end
 
@@ -80,7 +85,7 @@ class User
                             "#{user_info[:password]}"
                         );
                     SQL
-            ConnectionSqlite.new.db_connection.execute(query)
+            ConnectionSqlite.new.db_connection(query)
 
             users = self.all
                 if(users == nil)
@@ -111,7 +116,7 @@ class User
         query = <<-SQL
                     SELECT * FROM #{$tablename} WHERE id = #{uniq_user_id};
                 SQL
-        rows = ConnectionSqlite.new.db_connection.execute(query) # p(rows[0]) > 2-Dimensional Array
+        rows = ConnectionSqlite.new.db_connection(query) # p(rows[0]) > 2-Dimensional Array
             if(rows.any?) # any? > ?
                 rows = _initialize(rows[0])
             return rows
@@ -125,7 +130,7 @@ class User
         query = <<-SQL
                     SELECT * FROM #{$tablename}
                 SQL
-        rows = ConnectionSqlite.new.db_connection.execute(query)
+        rows = ConnectionSqlite.new.db_connection(query)
             if(rows.any?)
                 rows.collect do |index|
                     rows = _initialize(index)
@@ -149,7 +154,7 @@ class User
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            ConnectionSqlite.new.db_connection.execute(query)
+            ConnectionSqlite.new.db_connection(query)
 
             if(data[attributes] == value)
                 puts("You have added old data for > #{attributes}: #{value}")
@@ -171,7 +176,7 @@ class User
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            ConnectionSqlite.new.db_connection.execute(query) # CHECK
+            ConnectionSqlite.new.db_connection(query)
             data = self.get(uniq_user_id)
                 if(data == nil)
                     puts("User has been successfully deleted!")
@@ -191,7 +196,7 @@ class User
             query = <<-SQL
                         DELETE FROM #{$tablename}
                     SQL
-            ConnectionSqlite.new.db_connection.execute(query) # CHECK
+            ConnectionSqlite.new.db_connection(query)
             data = self.all
                 if(data == nil)
                     puts("Users have been deleted successfully!")
@@ -201,5 +206,5 @@ class User
                 return false
                 end
         end
-    end
-end # MB Rewrite > Returns Array of Hash.
+    end # MB Rewrite > Returns Array of Hash.
+end
