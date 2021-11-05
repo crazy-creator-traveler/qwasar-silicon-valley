@@ -11,25 +11,12 @@ require "sqlite3"
 $EXIT_SUCCESS = 0
 $EXIT_FAILURE = 1
 
-$db_filename = "db.sql" # Global Variable > We have to clarify about this.
+$db_filename = "my_first_app.db"
 $tablename   = "users"
 
 class ConnectionSqlite
-    def new
-        @db = nil
-    end
-
-    def get_connection
-        if(@db == nil)
-            @db = SQLite3::Database.new($db_filename)
-            create_db
-        end
-    return @db
-    end
-
-    def create_db    
-        # Create a table
-        rows = self.get_connection().execute <<-SQL 
+    def create_db(db_name)
+        db_name.execute <<-SQL 
         CREATE TABLE IF NOT EXISTS #{$tablename} (
             id INTEGER PRIMARY KEY,
             firstname varchar(30), 
@@ -41,9 +28,11 @@ class ConnectionSqlite
         SQL
     end
 
-    def execute(query) # Check
-        # p(query)
-        self.get_connection().execute(query)
+    def db_connection()
+        @db = SQLite3::Database.open($db_filename) # If this Database doesn't exist > It will be automatically created!
+        self.create_db(@db)
+        # db.execute(query) # > For construction > ConnectionSqlite.new.db_connection(query)    
+    return @db
     end
 end
 
@@ -91,20 +80,29 @@ class User
                             "#{user_info[:password]}"
                         );
                     SQL
-            # puts query
-            data = ConnectionSqlite.new.execute(query) # MB Rewrite...
-                if(data.class == Array)
-                    puts("Successfullly created a new user!\n#{user_info}")
-                    result = {:value=> true, :description=> "Successfullly created a new user!\n#{user_info}"}
+            ConnectionSqlite.new.db_connection.execute(query)
+
+            users = self.all
+                if(users == nil)
+                    puts("ERROR > User wasn't created !\nNOTE: Our Database > Right now completely empty!")
+                    result = {:value => false, :description => "ERROR > User wasn't created !\nNOTE: Our Database > Right now completely empty!"}
                 return result
                 else
-                    puts("ERROR > User wasn't created !")
-                    result = {:value=> false, :description=> "ERROR > User wasn't created !"}
-                return result
+                    users.collect do |user|
+                        if(user[:email] == user_info[:email])
+                            puts("Successfullly created a new user!\n#{user_info}")
+                            result = {:value => true, :description => "Successfullly created a new user!\n#{user_info}"}
+                        return result
+                        else
+                            puts("ERROR > User wasn't created !")
+                            result = {:value => false, :description => "ERROR > User wasn't created !"}
+                        return result
+                        end
+                    end
                 end
         else
             puts("This user already exists in the Database!\n#{user_info}")
-            result = {:value=> false, :description=> "This user already exists in the Database!\n#{user_info}"}
+            result = {:value => false, :description => "This user already exists in the Database!\n#{user_info}"}
         return result
         end 
     end
@@ -113,10 +111,9 @@ class User
         query = <<-SQL
                     SELECT * FROM #{$tablename} WHERE id = #{uniq_user_id};
                 SQL
-        # p(query)
-        rows = ConnectionSqlite.new.execute(query) # p(rows[0])
+        rows = ConnectionSqlite.new.db_connection.execute(query) # p(rows[0]) > 2-Dimensional Array
             if(rows.any?) # any? > ?
-                rows = _initialize(rows[0]) # MB Rewrite...
+                rows = _initialize(rows[0])
             return rows
             else
                 # puts("User with ID = #{uniq_user_id} > Doesn't exist !")
@@ -124,12 +121,11 @@ class User
             end
     end
 
-    def all
+    def all()
         query = <<-SQL
                     SELECT * FROM #{$tablename}
                 SQL
-
-        rows = ConnectionSqlite.new.execute(query) # p(rows)
+        rows = ConnectionSqlite.new.db_connection.execute(query)
             if(rows.any?)
                 rows.collect do |index|
                     rows = _initialize(index)
@@ -153,8 +149,7 @@ class User
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            # puts query
-            ConnectionSqlite.new.execute(query) # CHECK
+            ConnectionSqlite.new.db_connection.execute(query)
 
             if(data[attributes] == value)
                 puts("You have added old data for > #{attributes}: #{value}")
@@ -176,7 +171,7 @@ class User
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            ConnectionSqlite.new.execute(query) # CHECK
+            ConnectionSqlite.new.db_connection.execute(query) # CHECK
             data = self.get(uniq_user_id)
                 if(data == nil)
                     puts("User has been successfully deleted!")
@@ -188,7 +183,7 @@ class User
         end
     end # MB Rewrite > Returns Array of Hash.
 
-    def destroy_all
+    def destroy_all()
         if(self.all == nil)
             puts("Users does't exist! There is nothing to delete !")
         return nil
@@ -196,7 +191,7 @@ class User
             query = <<-SQL
                         DELETE FROM #{$tablename}
                     SQL
-            ConnectionSqlite.new.execute(query) # CHECK
+            ConnectionSqlite.new.db_connection.execute(query) # CHECK
             data = self.all
                 if(data == nil)
                     puts("Users have been deleted successfully!")
