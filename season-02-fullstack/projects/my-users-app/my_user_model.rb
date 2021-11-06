@@ -89,24 +89,20 @@ class User
 
             users = self.all
                 if(users == nil)
-                    puts("ERROR > User wasn't created !\nNOTE: Our Database > Right now completely empty!")
-                    result = {:value => false, :description => "ERROR > User wasn't created !\nNOTE: Our Database > Right now completely empty!"}
+                    result = {:value => false, :description => "ERROR > User wasn't created!\nNOTE: Our Database > Right now completely empty!"}
                 return result
                 else
                     users.collect do |user|
                         if(user[:email] == user_info[:email])
-                            puts("Successfullly created a new user!\n#{user_info}")
                             result = {:value => true, :description => "Successfullly created a new user!\n#{user_info}"}
                         return result
                         else
-                            puts("ERROR > User wasn't created !")
-                            result = {:value => false, :description => "ERROR > User wasn't created !"}
+                            result = {:value => false, :description => "ERROR > User wasn't created!"}
                         return result
                         end
                     end
                 end
         else
-            puts("This user already exists in the Database!\n#{user_info}")
             result = {:value => false, :description => "This user already exists in the Database!\n#{user_info}"}
         return result
         end 
@@ -121,8 +117,7 @@ class User
                 rows = _initialize(rows[0])
             return rows
             else
-                # puts("User with ID = #{uniq_user_id} > Doesn't exist !")
-            return nil
+                return nil
             end
     end
 
@@ -136,15 +131,14 @@ class User
                     rows = _initialize(index)
                 end # Returns New Array of Hash > rows
             else
-                # puts("Users Doesn't exist !")
-            return nil
+                return nil
             end
     end
 
     def update(uniq_user_id, attributes, value)
         if(self.get(uniq_user_id) == nil)
-            puts("User with ID = #{uniq_user_id} > Doesn't exist !")
-        return nil
+            result = {:value => false, :description => "User with ID = #{uniq_user_id} > Doesn't exist!"}
+        return result
         else
             data = self.get(uniq_user_id)
 
@@ -157,19 +151,19 @@ class User
             ConnectionSqlite.new.db_connection(query)
 
             if(data[attributes] == value)
-                puts("You have added old data for > #{attributes}: #{value}")
-            return false
+                result = {:value => false, :description => "You have added old data for > #{attributes}: #{value}"}
+            return result
             else
-                puts("Data updated successfully!")
-            return true
+                result = {:value => true, :description => "Data updated successfully!"}
+            return result
             end
         end
-    end # MB Rewrite > Returns Array of Hash.
+    end
 
     def destroy(uniq_user_id)
         if(self.get(uniq_user_id) == nil)
-            puts("User with ID = #{uniq_user_id} > Doesn't exist! There is nothing to delete !")
-        return nil
+            result = {:value => false, :description => "User with ID = #{uniq_user_id} > Doesn't exist! There is nothing to delete!"}
+        return result
         else
             query = <<-SQL
                         DELETE FROM #{$tablename}
@@ -179,19 +173,19 @@ class User
             ConnectionSqlite.new.db_connection(query)
             data = self.get(uniq_user_id)
                 if(data == nil)
-                    puts("User has been successfully deleted!")
-                return true
+                    result = {:value => true, :description => "User has been successfully deleted!"}
+                return result
                 else
-                    puts("ERROR > User has not been deleted!")
-                return false
+                    result = {:value => false, :description => "ERROR > User has not been deleted!"}
+                return result
                 end
         end
-    end # MB Rewrite > Returns Array of Hash.
+    end
 
     def destroy_all()
         if(self.all == nil)
-            puts("Users does't exist! There is nothing to delete !")
-        return nil
+            result = {:value => false, :description => "Users does't exist! There is nothing to delete!"}
+        return result
         else
             query = <<-SQL
                         DELETE FROM #{$tablename}
@@ -199,12 +193,12 @@ class User
             ConnectionSqlite.new.db_connection(query)
             data = self.all
                 if(data == nil)
-                    puts("Users have been deleted successfully!")
-                return true
+                    result = {:value => true, :description => "Users have been deleted successfully!"}
+                return result
                 else
-                    puts("ERROR > Users have not been deleted!!")
-                return false
+                    result = {:value => false, :description => "ERROR > Users have not been deleted!" } 
+                return result
                 end
         end
-    end # MB Rewrite > Returns Array of Hash.
+    end
 end
