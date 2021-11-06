@@ -4,19 +4,22 @@
 
 require_relative "my_user_model.rb"
 
-def main
+def main()
     firstname = "Sultan"
     lastname  = "Kyzyltau"
     age       =  22
     email     = "kyzyltau.sultan@gmail.com"
     password  = "my_password"
-        
+
 # TEST-1 > Creating New User
     puts("* * * * * * * * * * TEST-1. Creating New User * * * * * * * * * *")
-    new_user = User.new()
-    new_user.create(firstname: firstname, lastname: lastname, age: age, email: email, password: password)     
-    puts("\n\n")
-    
+    create_r = User.new.create(firstname: firstname, lastname: lastname, age: age, email: email, password: password)    
+        if(create_r[:value] == true)
+            puts(create_r[:description]); puts("\n\n")
+        else
+            puts(create_r[:description]); puts("\n\n")
+        end
+
 # TEST-2 > Reading User-Data with ID > 1
     puts("* * * * * * * * * * TEST-2. Reading User-Data with ID > 1 * * * * * * * * * *")
     user_data = User.new()
@@ -29,25 +32,40 @@ def main
 # TEST-3 > Reading All Users-Data
     puts("* * * * * * * * * * TEST-3. Reading All Users-Data * * * * * * * * * *")
     if(user_data.all == nil)
-        puts("Users doesn't exist !"); puts("\n\n")
+        puts("Users doesn't exist!"); puts("\n\n")
     else
         p(user_data.all); puts("\n\n")
     end
 
 # TEST-4 > Updating User-Data with ID > 1
     puts("* * * * * * * * * * TEST-4. Updating User-Data with ID > 1 * * * * * * * * * *")
-    user_data.update(1, :password, "your_password")
-    p(user_data.get(1)); puts("\n\n")
+    update_r = user_data.update(1, :password, "your_password")
+        if(update_r[:value] == true)
+            puts(update_r[:description])
+            p(user_data.get(1)); puts("\n\n")
+        else
+            puts(update_r[:description]); puts("\n\n")
+        end
 
 # TEST-5 > DESTROY User-Data with ID > 1
     puts("* * * * * * * * * * TEST-5. DESTROYING User-Data with ID > 1 * * * * * * * * * *")
-    user_data.destroy(1)
-    p(user_data.get(1)); puts("\n\n")
+    destroy_r = user_data.destroy(1)
+        if(destroy_r[:value] == true)
+            puts(destroy_r[:description])
+            p(user_data.get(1)); puts("\n\n")
+        else
+            puts(destroy_r[:description]); puts("\n\n")
+        end
 
 # TEST-6 > DESTROY All User-Data
     puts("* * * * * * * * * * TEST-6. DESTROYING All Users-Data * * * * * * * * * *")
-    user_data.destroy_all
-    p(user_data.all); puts
+    destroy_all_r = user_data.destroy_all
+        if(destroy_all_r[:value] == true)
+            puts(destroy_all_r[:description])
+            p(user_data.all); puts
+        else
+            puts(destroy_all_r[:description]); puts
+        end
 end
 
 main()
