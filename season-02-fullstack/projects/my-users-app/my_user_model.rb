@@ -42,20 +42,9 @@ class ConnectionSqlite
 end
 
 class User
-    attr_accessor :id, :firstname, :lastname, :age, :email, :password 
-
-    def _initialize(array)
-        @id        = array[0]
-        @firstname = array[1]
-        @lastname  = array[2]
-        @age       = array[3]
-        @email     = array[4]
-        @password  = array[5]  
-
+    def to_h_with_adding_keys(array)
         keys = ["id", "firstname", "lastname", "age", "email", "password"]
         keys.zip(array).to_h.transform_keys {|key| key.to_sym}
-
-       # array = "User id: #{@id}, Firstname: #{@firstname}, Lastname: #{@lastname}, Age: #{@age}, Email: #{@email}, Password: #{@password}"
     end
 
     def check_duplicates(user_info)
@@ -114,7 +103,7 @@ class User
                 SQL
         rows = ConnectionSqlite.new.db_connection(query) # p(rows[0]) > 2-Dimensional Array
             if(rows.any?) # any? > ?
-                rows = _initialize(rows[0])
+                rows = to_h_with_adding_keys(rows[0])
             return rows
             else
                 return nil
@@ -128,7 +117,7 @@ class User
         rows = ConnectionSqlite.new.db_connection(query)
             if(rows.any?)
                 rows.collect do |index|
-                    rows = _initialize(index)
+                    rows = to_h_with_adding_keys(index)
                 end # Returns New Array of Hash > rows
             else
                 return nil
