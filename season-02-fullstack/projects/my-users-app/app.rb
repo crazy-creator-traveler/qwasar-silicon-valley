@@ -42,20 +42,20 @@ post '/users' do # For Creating a New User.
 end
 
 get '/users' do # For Displaying All Users-Data > Except their password!
-    user = User.new()
-    data = user.all # "#{data}"
-                    # puts("#{data}") # Will not work! We can display in Browser OR Terminal! But not in both same time !
-        if(data == nil)
+    users = User.new()
+    users = users.all   # "#{users}"
+                        # puts("#{users}") # Will not work! We can display in Browser OR Terminal! But not in both same time !
+        if(users == nil)
             message = "Users Doesn't exist !"
         return message    
         else
             index = 0
-            data.collect do |user|
-                data[index] = user.except(:password) 
+            users.collect do |user|
+                users[index] = user.except(:password) 
                 index += 1
             end
             
-            message = "Below is information about users:\n#{data}"
+            message = "Below is information about users:\n#{users}"
         return message
         end
 end
@@ -87,12 +87,12 @@ end
 put '/users' do # For Changing the User's password.
     if(session[:user_id])
         user = User.new()
-        user = user.update(session[:user_id], :password, params[:password]) # p(session[:user_id])
-            if(user)
+        result = user.update(session[:user_id], :password, params[:password]) # p(session[:user_id])
+            if(result[:value] == true)
                 message = "Password updated successfully!\n"
             return message
             else
-                message = "ERROR > Failed to update your account! Please try again after a few minutes."
+                message = result[:description]
             return message
             end
     else
@@ -120,12 +120,12 @@ end
 delete '/users' do # For Sign out from the system && Destroying the current User. 
     if(session[:user_id])
         user = User.new()
-        data = user.destroy(session[:user_id])
-            if(data && session.clear.empty?)
+        result = user.destroy(session[:user_id])
+            if(result[:value] == true && session.clear.empty?)
                 message = "You have successfully deleted your account!"
             return message
             else
-                message = "ERROR > Failed to delete your account! Please try again after a few minutes."
+                message = "#{result[:description]} Please try again after a few minutes."
             return message
             end
     else
