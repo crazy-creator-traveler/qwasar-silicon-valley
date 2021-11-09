@@ -16,16 +16,10 @@ $tablename   = "users"
 
 class ConnectionSqlite
     def create_db(db_name)
-        db_name.execute <<-SQL 
-        CREATE TABLE IF NOT EXISTS #{$tablename} (
-            id INTEGER PRIMARY KEY,
-            firstname varchar(30), 
-            lastname varchar(30),
-            age int,
-            email varchar(30),
-            password varchar(30)
-        );
-        SQL
+        file = File.open("db.sql")
+        sql_script = file.read
+        db_name.execute(sql_script)
+        file.close
     end
 
     def db_connection(query)
