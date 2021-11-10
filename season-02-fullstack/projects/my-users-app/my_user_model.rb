@@ -81,9 +81,9 @@ class User
                         return result
                         else
                             result = {:value => false, :description => "ERROR > User wasn't created!"}
-                        return result
                         end
                     end
+                return result
                 end
         else
             result = {:value => false, :description => "This user already exists in the Database!\n#{user_info}"}
