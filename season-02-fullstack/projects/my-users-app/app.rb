@@ -41,22 +41,19 @@ post '/users' do # For Creating a New User.
     end    
 end
 
-get '/users' do # For Displaying All Users-Data > Except their password!
+get '/users' do # For Displaying All Users-Data > Except their password.
     users = User.new()
-    users = users.all   # "#{users}"
-                        # puts("#{users}") # Will not work! We can display in Browser OR Terminal! But not in both same time !
-        if(users == nil)
-            message = "Users Doesn't exist !"
-        return message    
+    @users = users.all
+        if(@users == nil)
+            @message = "Users Doesn't exist!"
+            erb :index
         else
             index = 0
-            users.collect do |user|
-                users[index] = user.except(:password) 
+            @users.collect do |user|
+                @users[index] = user.except(:password) 
                 index += 1
             end
-            
-            message = "Below is information about users:\n#{users}"
-        return message
+            erb :index
         end
 end
 
