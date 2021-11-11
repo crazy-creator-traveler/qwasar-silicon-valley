@@ -24,7 +24,7 @@ def main()
     puts("* * * * * * * * * * TEST-2. Reading User-Data with ID > 1 * * * * * * * * * *")
     user_data = User.new()
     if(user_data.get(1) == nil)
-        puts("User Doesn't exist!"); puts("\n\n")
+        puts("User not exist!"); puts("\n\n")
     else
         p(user_data.get(1)); puts("\n\n")
     end
@@ -32,7 +32,7 @@ def main()
 # TEST-3 > Reading All Users-Data
     puts("* * * * * * * * * * TEST-3. Reading All Users-Data * * * * * * * * * *")
     if(user_data.all == nil)
-        puts("Users doesn't exist!"); puts("\n\n")
+        puts("Users not exist!"); puts("\n\n")
     else
         p(user_data.all); puts("\n\n")
     end
@@ -66,6 +66,8 @@ def main()
         else
             puts(destroy_all_r[:description]); puts
         end
+        
+return 0
 end
 
 main()
