@@ -24,8 +24,6 @@ enable :sessions # To use SESSIONS
 post '/users' do # For Creating a New User.
     # p(params)
     if(params.empty?)
-        puts("You didn't enter any data!")
-        
         message = "You didn't enter any data!"
     return message
     else
@@ -45,7 +43,7 @@ get '/users' do # For Displaying All Users-Data > Except their password.
     users = User.new()
     @users = users.all
         if(@users == nil)
-            @message = "Users Doesn't exist!"
+            @message = "Users not exist at this time!"
             erb :index
         else
             index = 0
