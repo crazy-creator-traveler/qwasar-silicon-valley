@@ -167,7 +167,7 @@ class User
 
     def destroy_all()
         if(self.all == nil)
-            result = {:value => false, :description => "Users does't exist! There is nothing to delete!"}
+            result = {:value => false, :description => "Users not exist! There is nothing to delete!"}
         return result
         else
             query = <<-SQL
