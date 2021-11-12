@@ -4,47 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/redm-1.0.0.css">
     <link rel="stylesheet" href="/style.css">
     <title>My Users App</title>
 </head>
 <body>
-    <h1 class="table-name">Users</h1>
-    <table>
-        <tr>
-            <th>№</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Email</th>
-        </tr>
-        <%if(@users == nil)%>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+    <div grid_container="main">
+        <h1  grid_col="6/8" class="table-name">Users</h1>
+        <table grid_col="col-all" class="table">
+            <tr class="table__row-1">
+                <th class="table__col-1">№</th>
+                <th class="table__col-2">First Name</th>
+                <th class="table__col-3">Last Name</th>
+                <th class="table__col-4">Age</th>
+                <th class="table__col-5">Email</th>
             </tr>
-        <%else%>
-            <%index = 1%>
-            <%@users.each do |user|%>
+            <%if(@users == nil)%>
                 <tr>
-                    <td> <%=index%> </td>
-                    <td> <%=user[:firstname]%> </td>
-                    <td> <%=user[:lastname]%> </td>
-                    <td> <%=user[:age]%> </td>
-                    <td> <%=user[:email]%> </td>
+                    <td class="table__col-1"></td>
+                    <td class="table__col-2"></td>
+                    <td class="table__col-3"></td>
+                    <td class="table__col-4"></td>
+                    <td class="table__col-5"></td>
                 </tr>
-                <%index += 1%>
+            <%else%>
+                <%index = 1%>
+                <%@users.each do |user|%>
+                    <tr>
+                        <td class="table__col-1"> <%=index%> </td>
+                        <td class="table__col-2"> <%=user[:firstname]%> </td>
+                        <td class="table__col-3"> <%=user[:lastname]%> </td>
+                        <td class="table__col-4"> <%=user[:age]%> </td>
+                        <td class="table__col-5"> <%=user[:email]%> </td>
+                    </tr>
+                    <%index += 1%>
+                <%end%>
             <%end%>
+        </table>
+        <%if(@users == nil)%>
+            <div grid_col="col-all" class="note">
+                <h3>NOTE:</h3>
+                <p>-<%=@message%></p>
+                <p>-You can create New Users > For that run gandalf.rb > Use only <b>TEST-1</b></p>
+            </div>
         <%end%>
-    </table>
-    <%if(@users == nil)%>
-        <div>
-            <h3>NOTE:</h3>
-            <p><%=@message%></p>
-            <p>You can create New Users > For that run gandalf.rb > Use only <b>TEST-1</b></p>
-        </div>
-    <%end%>
+    </div>
 </body>
 </html>
