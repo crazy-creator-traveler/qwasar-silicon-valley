@@ -42,12 +42,15 @@
             <%end%>
         </table>
         <%if(@users == nil)%>
-            <div grid_col="col-all" class="note">
+            <div grid_col="1/6" class="note">
                 <h3>NOTE:</h3>
                 <p>-<%=@message%></p>
                 <p>-You can create New Users > For that run gandalf.rb > Use only <b>TEST-1</b></p>
             </div>
         <%end%>
+        <div grid_col="6/13">
+            <img src="/img/img.gif" width="100%" height="100%">
+        </div>
     </div>
 </body>
 </html>
