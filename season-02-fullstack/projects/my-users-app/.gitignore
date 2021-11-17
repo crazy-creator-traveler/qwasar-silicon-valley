@@ -2,5 +2,5 @@
 
 README-RU.md
 Gemfile.lock
-*txt
-*db
+*.txt
+*.db
