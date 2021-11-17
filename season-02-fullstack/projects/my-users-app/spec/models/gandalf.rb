@@ -2,7 +2,7 @@
         Gandalf > For Testing Program Code > my_user_model.rb
 =end
 
-require_relative "my_user_model.rb"
+require "../../app/models/my_user_model.rb"
 
 def main()
     firstname = "Sultan"
