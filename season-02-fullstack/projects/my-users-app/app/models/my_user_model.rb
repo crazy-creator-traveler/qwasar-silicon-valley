@@ -11,12 +11,12 @@ require "sqlite3"
 EXIT_SUCCESS = 0
 EXIT_FAILURE = 1
 
-$db_filename = "my_first_app.db"
+$db_filename = "../../db/my_first_app.db"
 $tablename   = "users"
 
 class ConnectionSqlite
     def create_db(db_name)
-        file = File.open("db.sql")
+        file = File.open("../../db/db.sql")
         sql_script = file.read
         db_name.execute(sql_script)
         file.close
