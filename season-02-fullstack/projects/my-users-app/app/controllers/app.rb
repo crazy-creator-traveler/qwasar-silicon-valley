@@ -15,8 +15,11 @@ EXAMPLE:
 =end
 
 require 'sinatra'
-require_relative "my_user_model.rb"
+require "../models/my_user_model.rb"
 
+# Thus the erb :index Method > Will search files in the "app/views" Directory.
+set :views, Proc.new { File.join(root, "views") }
+            
 set :port, 8090
 # set :bind, '0.0.0.0'
 enable :sessions # To use SESSIONS
