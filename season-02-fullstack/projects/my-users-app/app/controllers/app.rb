@@ -21,6 +21,9 @@ require "../models/my_user_model.rb"
 set :root, File.join(File.dirname(__FILE__), '..')  # Changes|Sets Parent-Directory for the current File > If it was 'controllers/app.rb' > Now it is 'app/app.rb'.
                                                     # This is necessary so that the erb Method can find the '/views' Directory > Where the Views-Components are contained.
                                                     # Since the erb Method > Automatically looks for a file in the 'parent-directory/' of the current file + adds the 'views/' Directory. The result of the path is 'parent-directory/views/some_file.erb' === 'app/views/some_file.erb'.
+
+set :public_folder, '../../public'  # Thus, we have indicated where to look for the '/public' Directory.
+                                    # Since by default it is indicated that the '/public' Directory and the '/views' Directory are located in the same common Directory.
 set :port, 8090
 # set :bind, '0.0.0.0'
 enable :sessions # To use SESSIONS
