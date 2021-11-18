@@ -18,8 +18,9 @@ require 'sinatra'
 require "../models/my_user_model.rb"
 
 # Thus the erb :index Method > Will search files in the "app/views" Directory.
-set :views, Proc.new { File.join(root, "views") }
-            
+set :root, File.join(File.dirname(__FILE__), '..')  # Changes|Sets Parent-Directory for the current File > If it was 'controllers/app.rb' > Now it is 'app/app.rb'.
+                                                    # This is necessary so that the erb Method can find the '/views' Directory > Where the Views-Components are contained.
+                                                    # Since the erb Method > Automatically looks for a file in the 'parent-directory/' of the current file + adds the 'views/' Directory. The result of the path is 'parent-directory/views/some_file.erb' === 'app/views/some_file.erb'.
 set :port, 8090
 # set :bind, '0.0.0.0'
 enable :sessions # To use SESSIONS
@@ -48,6 +49,7 @@ get '/users' do # For Displaying All Users-Data > Except their password.
         if(@users == nil)
             @message = "Users not exist at this time!"
             erb :index
+          # erb :"advertising-posts/advertising_1"  # For example: If we need to include another file advertising_1.erb > Which is stored in the '/advertising-posts' Sub-Directory.  
         else
             index = 0
             @users.collect do |user|
