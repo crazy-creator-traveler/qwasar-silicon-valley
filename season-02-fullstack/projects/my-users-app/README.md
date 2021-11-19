@@ -22,8 +22,16 @@
         <li><b>Controller</b></li>
         <p>The Controller handles user requests and delegates information between the Model and the View. It only deals with requests, and never handles data or presentation.</p>
     </ul>
-    <img href="">
-    <p>Additional sources: -Link to YouTube</p>
+    <div align="center">
+        <img width="800" height="500" src="public/img/mvc-architecture_pattern.png">
+    </div>
+    <div>
+        <h3>Additional Sources:</h3>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=DUg2SWWK18I"><b>MVC Explained in 4 Minutes</b></a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </div>
     <br>
     <br>
     <p>The main goal of this project was to get acquainted and implement a Web-Application using the MVC Architecture.</p>
