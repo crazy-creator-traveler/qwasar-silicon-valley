@@ -9,6 +9,7 @@
 </ul>
 <hr>
 
+<!--Project Description-->
 <div>
     <h2>Project Description</h2>
     <p><b>My Users App</b> is a Web-Application that was implemented using the very famous Architecture Pattern > <b>MVC | Model View Controller</b>.</p>
@@ -38,16 +39,21 @@
 </div>
 <hr>
 
+<!--Getting Started-->
 <div>
     <h2>Getting Started</h2>
     <p>Soon ...</p>
 </div>
+<hr>
 
+<!--Documentation-->
 <div>
     <h2>Documentation</h2>
     <p>Soon ...</p>
 </div>
+<hr>
 
+<!--Technology Stack-->
 <div>
     <h2>Technology Stack</h2>
     <p>Soon ...</p>
