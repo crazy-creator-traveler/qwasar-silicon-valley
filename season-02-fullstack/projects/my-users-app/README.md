@@ -1,91 +1,46 @@
-# PROJECT My_User_App
-Have to:
-    
-    1) Contains > CLASS User with Methods such as:
-        I. create()
-                ==> Have to:
-                        
-                        1) Takes as INPUT > USER INFO which contained:
-                                                                - firstname
-                                                                - lastname
-                                                                - age
-                                                                - password
-                                                                - email
-                
-                        2) CREATES > a NEW USER.
-                    
-                        3) Return as OUTPUT > A Uniq USER ID > In The POSITIVE INTEGER-Data Type.
+<h1 align="center">My Users App</h1>
 
-        II. get()
-                ==> Have to:
-                        1) Takes as INPUT > USER ID.
-                        
-                        2) ...
+<h2>Topics:</h2>
+<ul>
+    <li><a href="#description-about-project"><b>Project Description</b></a></li>
+    <li><a href="#getting-started"><b>Getting Started</b></a></li>
+    <li><a href="#documentation"><b>Documentation</b></a></li>
+    <li><a href="#technology-stack"><b>Technology Stack</b></a></li>
+</ul>
+<hr>
 
-                        3) Returns as OUTPUT > All information about USER 
-                                                            ==> Which contained in the DATABASE.
-                    
-        III. all
-                ==> Have to:
-                        1) Takes as INPUT > All USERS ID
+<div>
+    <h2>Project Description</h2>
+    <p><b>My Users App</b> is a Web-Application that was implemented using the very famous Architecture Pattern > <b>MVC | Model View Controller</b>.</p>
+    <p><b>MVC</b> is the most popular Architecture for building complex Web-Servers. It is used by many Frameworks, and implemented into nearly every modern Web-Application.</p>
+    <p><b>MVC</b> divides application into 3-Components > Each with a specific responsibility.</p>
+    <ul>
+        <li><b>Model</b></li>
+        <p>The Model handles data validation, logic, and persistence. It interacts directly with the database to handle the data. The Controller will get all of its data information by asking the Model about the data.</p>
+        <li><b>View</b></li>
+        <p>The View handles presenting the information. It will usually render dynamic HTML pages based on the data the model fetches. The Controller is responsible for passing that data between the Model and View, so that the Model and View never have to interact with each other.</p>
+        <li><b>Controller</b></li>
+        <p>The Controller handles user requests and delegates information between the Model and the View. It only deals with requests, and never handles data or presentation.</p>
+    </ul>
+    <img href="">
+    <p>Additional sources: -Link to YouTube</p>
+    <br>
+    <br>
+    <p>The main goal of this project was to get acquainted and implement a Web-Application using the MVC Architecture.</p>
+</div>
+<hr>
 
-                        2) ...
+<div>
+    <h2>Getting Started</h2>
+    <p>Soon ...</p>
+</div>
 
-                        3) Returns as OUTPUT > Hash of USERS.
+<div>
+    <h2>Documentation</h2>
+    <p>Soon ...</p>
+</div>
 
-        IV. update()
-                ==> Have to:
-                        1) Takes as INPUT > 3-ARGUMENTS :
-                                                    - User ID
-                                                    - Attributes
-                                                    - Value
-
-                        2) Updates > ...
-
-                        3) Returns as OUTPUT > Hash of USER.
-
-        V. destroy()
-                ==> Have to:
-                        1) Takes as INPUT > User ID.
-
-                        2) Deletes all Data of this User > From the DATABASE.
-
-                        3) Returns as OUTPUT > The Updated DATABASE.
-* * *
-    * * *
-* * *
-    2)
-
-
-# We will use Technology|Pattern in software design  >  MVC | MODEL VIEW CONTROLER
-1) MODEL
-        ==> Это грубыми словами База Данных
-        
-        ==> Отвечает за данные приложения
-
-        ==> Свою очередю это :
-                        - База Данных
-
-                        - И скрипты на SQL > Которую Создают-Данные | Обновляют-Данные | Удаляют-Данные. 
-
-2) VIEW
-        ==> Это грубыми словами HTML-разметка.
-        
-        ==> Отвечает за внешний вид
-
-3) CONTOLER
-        ==> Это грубыми словами Основная Логика. 
-            ==> В нашем случае app.rb
-        
-        ==> Контролирует работу приложения
-
-# TOTAL FILES
-1) views/index.html > Contains VIEW | USER INTERFACE;
-2) app.rb           > Contains some logic ...;
-3) my_user_model.rb > Contains Class User and it's Methods;
-                    > Contains SQL-Scricpt
-4) db.sql           > Contains DataBase;
-5) README.md        > Contains all necessary info about > PROJECT.
-
-
-# Lust Update: 22:26  16/09/2021
+<div>
+    <h2>Technology Stack</h2>
+    <p>Soon ...</p>
+</div>
