@@ -2,7 +2,7 @@
 
 <h2>Topics:</h2>
 <ul>
-    <li><a href="#description-about-project"><b>Project Description</b></a></li>
+    <li><a href="#project-description"><b>Project Description</b></a></li>
     <li><a href="#getting-started"><b>Getting Started</b></a></li>
     <li><a href="#documentation"><b>Documentation</b></a></li>
     <li><a href="#technology-stack"><b>Technology Stack</b></a></li>
@@ -42,7 +42,37 @@
 <!--Getting Started-->
 <div>
     <h2>Getting Started</h2>
-    <p>Soon ...</p>
+    <ol type="1">
+        <li><h3>Installing && Running The Web-Application</h3></li>
+            <ol type="1">
+                <li><b>Clone the repository</b></li>
+                    <p><code>$ git clone git@github.com:Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                    <p>(This information will be updated soon)</p><br>
+                <li><b>Make sure the Ruby-Programming Language is installed</b></li>
+                    <p><code>$ ruby -v</code></p>
+                    <span>Your Terminal should display the Ruby version something like this:</span>
+                    <p><code>$ ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux]</code></p>
+                    <p>Otherwise, you will need to install Ruby > Follow this link
+                        <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">Ruby Installation Guide</a>
+                    </p><br>
+                <li><b>Make sure the Bundle Gem is installed</b></li>
+                    <p><code>$ bundle -v</code></p>
+                    <span>Your Terminal should display the Bundler version something like this:</span>
+                    <p><code>$ Bundler version 2.2.29</code></p>
+                    <span>Otherwise, you will need to install Bundle Gem</span>
+                    <p><code>$ gem install bundler</code></p><br>
+                <li><b>Move to <code>my_users_app</code> Directory</b></li>
+                    <p><code>$ cd my_users_app</code></p><br>
+                <li><b>Run the following command to install all the required Gems that are listed in the Gemfile</b></li>
+                    <p><code>$ bundle install</code></p><br>
+                <li><b>Move to <code>app/сontrollers</code> Directory and Run the Web-Server</b></li>
+                    <p><code>$ cd app/controllers</code></p>
+                    <p><code>$ ruby app.rb</code></p><br>
+                <li><b>Go to <code>http://localhost:8090/users</code> And you'll see > All Users-Data</b></li><br>
+            </ol><br>
+        <li><h3>Running Built-In Tests</h3></li>
+        <p>...</p>
+    </ol>
 </div>
 <hr>
 
