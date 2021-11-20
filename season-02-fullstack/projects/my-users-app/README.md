@@ -70,8 +70,25 @@
                     <p><code>$ ruby app.rb</code></p><br>
                 <li><b>Go to <code>http://localhost:8090/users</code> And you'll see > All Users-Data</b></li><br>
             </ol><br>
-        <li><h3>Running Built-In Tests</h3></li>
-        <p>...</p>
+        <li><h3>Running The Built-In Tests</h3></li>
+            <ul>
+                <li><b>Running tests to test the Program Code > app.rb</b></li>
+                <ol type="1">
+                    <li>Move to <code>app/сontrollers</code> Directory and Run the Web-Server</li>
+                        <p><code>$ cd app/controllers</code></p>
+                        <p><code>$ ruby app.rb</code></p><br>
+                    <li>Open an additional Terminal window and Move to <code>spec/controllers</code> Directory</li>
+                        <p><code>$ cd spec/controllers</code></p><br>
+                    <li>Run the tests gandalf.sh</li>
+                        <p><code>$ sh gandalf.sh</code></p><br>
+                </ol>
+                <li><b>Running tests to test the Program Code > my_user_model.rb</b></li>
+                <ol type="1">
+                    <li>Move to <code>spec/models</code> Directory and Run the tests gandalf.rb</li>
+                        <p><code>$ cd spec/models</code></p>
+                        <p><code>$ ruby gandalf.rb</code></p>
+                </ol>
+            </ul>
     </ol>
 </div>
 <hr>
