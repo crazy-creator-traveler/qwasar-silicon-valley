@@ -96,7 +96,43 @@
 <!--The API Documentation-->
 <div>
     <h2>The API Documentation</h2>
-    <p>Soon ...</p>
+    <h3>Classes:</h3>
+    <ul>
+        <li><b>ConnectionSqlite</b></li>
+            <ul>
+                <li><b>Method <code>create_db()</code></b></li>
+                <p>This Method is used to > Create Tables in a Database.</p>
+                <span>Method have to:</span>
+                <ol type="1">
+                    <li>Takes as Input > 1-Argument > It must be an Open Database</li>
+                    <li>Executes SQL-Scripts > To Build Tables in the Database</li>
+                    <li>Returns as Output > Constructed Tables in the Database</li>
+                </ol><br><br>
+                <li><b>Method <code>db_connection()</code></b></li>
+                <p>This Method is used to > Connect to the Database.</p>
+                <span>Method have to:</span>
+                <ol type="1">
+                    <li>Takes as Input > 1-Argument > SQL-Query</li>
+                    <li>Opens the Database</li>
+                    <li>Executes SQL-Query</li>
+                    <li>Returns as Output > The response from the Database as an Array</li>
+                    <span>The Array Data varies depending on the type of Query > In other words which of the <b>CRUD-Operations</b> was performed:</span>
+                    <ul>
+                        <li>If the Query is a <b>Create-Operation</b>  > The Database will return an Empty Array</li>
+                        <li>If the Query is a <b>Read-Operation</b>    > The Database will return an Array containing certain data</li>
+                        <li>If the Query is a <b>Update-Operation</b>  > The Database will return an Empty Array</li>
+                        <li>If the Query is a <b>Destroy-Operation</b> > The Database will return an Empty Array</li>
+                    </ul>
+                </ol><br><br>
+            </ul><br>
+        <li><b>User</b></li>
+            <ul>
+                <li><b>Method <code>to_h_with_adding_keys(array)</code></b></li>
+                <p>...</p>
+                <li><b>Method <code>check_duplicates(user_info)</code></b></li>
+                <p>...</p>
+            </ul><br>
+    </ul>
 </div>
 <hr>
 
