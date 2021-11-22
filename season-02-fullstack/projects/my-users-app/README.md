@@ -150,6 +150,21 @@
                             <li><code>EXIT_FAILURE</code> > If duplicates are found</li>
                         <ul>
                 </ol><br><br>
+                <li><b>Method <code>create(user_info)</code></b></li>
+                <p>This Method is used to > Create a New User in the Database.</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
+                    <li>Checks for the existence of the <code>user_info</code> User in the Database</li>
+                    <li>Sends the SQL-Query to Create a User to the Database</li>
+                    <li>Checks whether the User has been created in the Database</li>
+                    <li>Returns as Output > :</li>
+                        <ul>
+                            <li>Hash Data > <code>result = {value: true; description: ...}</code> > If the <code>user_info</code> User has been successfully created in the Database</li>
+                            <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User has not been created in the Database</li>
+                            <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User already exists in the Database</li>
+                        </ul>
+                </ol><br><br>
             </ul><br>
     </ul>
 </div>
