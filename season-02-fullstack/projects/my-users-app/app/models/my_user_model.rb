@@ -118,28 +118,27 @@ class User
             end
     end
 
-    def update(uniq_user_id, attributes, value)
+    def update(uniq_user_id, attribute, value)
         if(self.get(uniq_user_id) == nil)
             result = {:value => false, :description => "User with ID = #{uniq_user_id} > Doesn't exist!"}
         return result
         else
             data = self.get(uniq_user_id)
-
-            query = <<-SQL
+                if(data[attribute] == value)
+                    result = {:value => false, :description => "You have added old data for > #{attribute}: #{value}"}
+                return result
+                else
+                    query = <<-SQL
                         UPDATE #{$tablename}
-                        SET #{attributes} = '#{value}'
+                        SET #{attribute} = '#{value}'
                         WHERE 
                             id = #{uniq_user_id}
                     SQL
-            ConnectionSqlite.new.db_connection(query)
-
-            if(data[attributes] == value)
-                result = {:value => false, :description => "You have added old data for > #{attributes}: #{value}"}
-            return result
-            else
-                result = {:value => true, :description => "Data updated successfully!"}
-            return result
-            end
+                    ConnectionSqlite.new.db_connection(query)    
+                    
+                    result = {:value => true, :description => "Data updated successfully!"}
+                return result
+                end
         end
     end
 
