@@ -155,14 +155,28 @@
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
                     <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
-                    <li>Checks for the existence of the <code>user_info</code> User in the Database</li>
-                    <li>Sends the SQL-Query to Create a User to the Database</li>
-                    <li>Checks whether the User has been created in the Database</li>
+                    <li>Checks for the existence of the <code>user_info</code> in the Database</li>
+                    <li>Sends the SQL-Query using <code>user_info</code> to create a new user to the Database</li>
+                    <li>Checks whether the new user has been created in the Database</li>
                     <li>Returns as Output > :</li>
                         <ul>
                             <li>Hash Data > <code>result = {value: true; description: ...}</code> > If the <code>user_info</code> User has been successfully created in the Database</li>
                             <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User has not been created in the Database</li>
                             <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User already exists in the Database</li>
+                        </ul>
+                </ol><br><br>
+                <li><b>Method <code>get(uniq_user_id)</code></b></li>
+                <p>This Method is used to > Retrieve User Data from the Database.</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > 1-Argument: <code>uniq_user_id</code> > In Integer Data type</li>
+                    <li>Sends the SQL-Query using <code>uniq_user_id</code> to retrieve data from the Database</li>
+                    <li>Checks the Received Array from the Database > For the existence of user data</li>
+                    <li>Converts the Received Array from the Database > Into a Hash Data with the addition of keys</li>
+                    <li>Returns as Output > :</li>
+                        <ul>
+                            <li>Hash containing user data > If user exists in the Database</li>
+                            <li>Null > If the user doesn't exist in the Database</li>
                         </ul>
                 </ol><br><br>
             </ul><br>
