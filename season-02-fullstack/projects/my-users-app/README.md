@@ -179,6 +179,20 @@
                             <li>Null > If the user doesn't exist in the Database</li>
                         </ul>
                 </ol><br><br>
+                <li><b>Method <code>all()</code></b></li>
+                <p>This Method is used to > Retrieve All Data of All Users from the Database</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > Nothing</li>
+                    <li>Sends an SQL-Query to retrieve all data of all users from the Database</li>
+                    <li>Checks the Received Array from the Database > For the existence of users data</li>
+                    <li>Converts the Received Array from the Database > Into a Hash Data with the addition of keys</li>
+                    <li>Returns as Output > :</li>
+                         <ul>
+                            <li>Hash containing users data > If users exist in the Database</li>
+                            <li>Null > If the users don't exist in the Database</li>
+                        </ul>
+                </ol><br><br>
             </ul><br>
     </ul>
 </div>
