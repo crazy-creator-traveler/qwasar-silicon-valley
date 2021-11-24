@@ -160,9 +160,9 @@
                     <li>Checks whether the new user has been created in the Database</li>
                     <li>Returns as Output > :</li>
                         <ul>
-                            <li>Hash Data > <code>result = {value: true; description: ...}</code> > If the <code>user_info</code> User has been successfully created in the Database</li>
-                            <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User has not been created in the Database</li>
-                            <li>Hash Data > <code>result = {value: false; description: ...}</code> > If the <code>user_info</code> User already exists in the Database</li>
+                            <li>Hash Data > <code>result = {:value => true, :description => ...}</code> > If the <code>user_info</code> User has been successfully created in the Database</li>
+                            <li>Hash Data > <code>result = {:value => false, :description => ...}</code> > If the <code>user_info</code> User has not been created in the Database</li>
+                            <li>Hash Data > <code>result = {:value => false, :description => ...}</code> > If the <code>user_info</code> User already exists in the Database</li>
                         </ul>
                 </ol><br><br>
                 <li><b>Method <code>get(uniq_user_id)</code></b></li>
