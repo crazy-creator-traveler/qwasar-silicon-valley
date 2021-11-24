@@ -57,7 +57,7 @@ def main()
             puts(destroy_r[:description]); puts("\n\n")
         end
 
-# TEST-6 > DESTROY All User-Data
+# TEST-6 > DESTROY All Users-Data
     puts("* * * * * * * * * * TEST-6. DESTROYING All Users-Data * * * * * * * * * *")
     destroy_all_r = user_data.destroy_all
         if(destroy_all_r[:value] == true)
