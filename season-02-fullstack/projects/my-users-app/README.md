@@ -156,7 +156,7 @@
                 <ol type="1">
                     <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
                     <li>Checks for the existence of the <code>user_info</code> in the Database</li>
-                    <li>Sends the SQL-Query using <code>user_info</code> to create a new user to the Database</li>
+                    <li>Sends the SQL-Query using <code>user_info</code> to create a new user in the Database</li>
                     <li>Checks whether the new user has been created in the Database</li>
                     <li>Returns as Output > :</li>
                         <ul>
@@ -184,13 +184,33 @@
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
                     <li>Takes as Input > Nothing</li>
-                    <li>Sends an SQL-Query to retrieve all data of all users from the Database</li>
+                    <li>Sends the SQL-Query to retrieve all data of all users from the Database</li>
                     <li>Checks the Received Array from the Database > For the existence of users data</li>
                     <li>Converts the Received Array from the Database > Into a Hash Data with the addition of keys</li>
                     <li>Returns as Output > :</li>
                          <ul>
                             <li>Hash containing users data > If users exist in the Database</li>
                             <li>Null > If the users don't exist in the Database</li>
+                        </ul>
+                </ol><br><br>
+                <li><b>Method <code>update(uniq_user_id, attribute, value)</code></b></li>
+                <p>This Method is used to > Update user data in the Database.</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > 3-Arguments:</li>
+                        <ol type="1">
+                            <li><code>uniq_user_id</code> > It must be an integer in: -Integer Datatype or -String Datatype</li>
+                            <li><code>attribute</code> > It can be in: -String Datatype or -Symbol Datatype</li>
+                            <li><code>value</code> > It can be in: -String Datatype or -Integer Datatype</li>
+                        </ol>
+                    <li>Checks the existence of a user with <code>uniq_user_id</code> in the Database</li>
+                    <li>Compares the Received Data with the Existing Data stored in the Database to make sure new data is entered for updating</li>
+                    <li>Sends the SQL-Query using <code>uniq_user_id</code>, <code>attribute</code>, <code>value</code> to update user data in the Database</li>
+                    <li>Returns as Output > :</li>
+                        <ul>
+                            <li>Hash Data > <code>result = {:value => true, :description => ...}</code> > If the data has been successfully updated in the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the user with the <code>uniq_user_id</code> doesn't exist in the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If old data has been entered</li>
                         </ul>
                 </ol><br><br>
             </ul><br>
