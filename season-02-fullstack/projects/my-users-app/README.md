@@ -170,7 +170,7 @@
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
                     <li>Takes as Input > 1-Argument: <code>uniq_user_id</code> > In Integer Data type</li>
-                    <li>Sends the SQL-Query using <code>uniq_user_id</code> to retrieve data from the Database</li>
+                    <li>Sends the SQL-Query using <code>uniq_user_id</code> to retrieve user data from the Database</li>
                     <li>Checks the Received Array from the Database > For the existence of user data</li>
                     <li>Converts the Received Array from the Database > Into a Hash Data with the addition of keys</li>
                     <li>Returns as Output > :</li>
@@ -211,6 +211,21 @@
                             <li>Hash Data > <code>result = {:value => true, :description => ...}</code> > If the data has been successfully updated in the Database</li>
                             <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the user with the <code>uniq_user_id</code> doesn't exist in the Database</li>
                             <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If old data has been entered</li>
+                        </ul>
+                </ol><br><br>
+                <li><b>Method <code>destroy(uniq_user_id)</code></b></li>
+                <p>This Method is used to > Delete user data in the Database.</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > 1-Argument: <code>uniq_user_id</code> > In Integer Datatype</li>
+                    <li>Checks the existence of a user with <code>uniq_user_id</code> in the Database</li>
+                    <li>Sends the SQL-Query using <code>uniq_user_id</code> to delete user data in the Database</li>
+                    <li>Checks whether the user has been deleted in the Database</li>
+                    <li>Returns as Output > :</li>
+                        <ul>
+                            <li>Hash Data > <code>result = {:value => true, :description => ...}</code> > If the user has been successfully deleted from the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the user with the <code>uniq_user_id</code> doesn't exist in the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the user has not been deleted from the Database</li>
                         </ul>
                 </ol><br><br>
             </ul><br>
