@@ -228,6 +228,21 @@
                             <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the user has not been deleted from the Database</li>
                         </ul>
                 </ol><br><br>
+                <li><b>Method <code>destroy_all()</code></b></li>
+                <p>This Method is used to > Delete all users data in the Database.</p>
+                <span>The Algorithm of the Method:</span>
+                <ol type="1">
+                    <li>Takes as Input > Nothing</li>
+                    <li>Checks the existence of a users in the Database</li>
+                    <li>Sends the SQL-Query to delete all users data in the Database</li>
+                    <li>Checks whether the users have been deleted in the Database</li>
+                    <li>Returns as Output > :</li>
+                        <ul>
+                            <li>Hash Data > <code>result = {:value => true, :description => ...}</code> > If the users have been successfully deleted from the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the users don't exist in the Database</li>
+                            <li>Hash data > <code>result = {:value => false, :description => ...}</code> > If the users have not been deleted from the Database</li>
+                        </ul>
+                </ol>
             </ul><br>
     </ul>
 </div>
