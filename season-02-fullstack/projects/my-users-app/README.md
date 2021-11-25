@@ -129,7 +129,7 @@
             <ul>
                 <li><b>Method <code>to_h_with_adding_keys(array)</code></b></li>
                 <p>This Method is used to > Convert an Array Data type to a Hash Data type with the addition of keys.</p>
-                <span>Method have to:</span>
+                <span>The Algorithm of the Method:</span>
                 <ol type ="1">
                     <li>Takes as Input > 1-Argument: <code>array</code> > In Array Data type</li>
                     <li>Creates special Keys</li>
@@ -138,7 +138,7 @@
                 </ol><br><br>
                 <li><b>Method <code>check_duplicates(user_info)</code></b></li>
                 <p>This Method is used to > Сheck the Database for duplicate data.</p>
-                <span>Method have to:</span>
+                <span>The Algorithm of the Method:</span>
                 <ol type="1">
                     <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
                     <li>Queries all users data from the Database</li>
