@@ -251,5 +251,13 @@
 <!--Technology Stack-->
 <div>
     <h2>Technology Stack</h2>
-    <p>Soon ...</p>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3 > redm-1.0.0.css</li>
+        <li>Ruby > Sinatra</li>
+        <li>Database > SQLite</li>
+        <li>Shell Script</li>
+        <li>Git | GitHub</li>
+        <li>MVC Architecture Pattern</li>
+    </ul>
 </div>
