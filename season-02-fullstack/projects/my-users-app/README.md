@@ -140,10 +140,10 @@
                 <p>This Method is used to > Сheck the Database for duplicate data.</p>
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
-                    <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
-                    <li>Queries all users data from the Database</li>
-                    <li>Checks the Received Array from the Database > For the existence of any users data</li>
-                    <li>Checks the Received Array from the Database > With the <code>user_info</code> Argument, comparing the mail data of the users</li>
+                    <li>Takes as Input > 1-Argument: <code>user_info</code> > In Hash Datatype</li>
+                    <li>Queries all users data from the Database using the <code>all()</code> Method</li>
+                    <li>Checks the <code>data</code> Received Hash from the <code>all()</code> Method > For the existence of any users data</li>
+                    <li>Checks the <code>data</code> Received Hash from the <code>all()</code> Method > With the <code>user_info</code> Argument, comparing the email data of the users</li>
                     <li>Returns as Output > :</li>
                         <ul>
                             <li><code>EXIT_SUCCESS</code> > If duplicates are not found</li>
