@@ -56,8 +56,11 @@ class User
             end
     end
 
-    def create(user_info) # id > Является уникальным он автоматически будет добавлен === 1  > И т.д. 
-        if(check_duplicates(user_info) == 0)
+    def create(user_info)
+        if(user_info[:email] == nil)
+            result = {:value => false, :description => "Please provide your email address!\n"}
+        return result
+        elsif(check_duplicates(user_info) == 0)
             query = <<-SQL
                     INSERT INTO #{$tablename} (firstname, lastname, age, email, password) 
                     VALUES (
