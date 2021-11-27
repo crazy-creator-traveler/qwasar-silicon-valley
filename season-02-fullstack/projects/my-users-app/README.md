@@ -154,8 +154,9 @@
                 <p>This Method is used to > Create a New User in the Database.</p>
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
-                    <li>Takes as Input > 1-Argument: <code>user_info</code> > In Array Data type</li>
-                    <li>Checks for the existence of the <code>user_info</code> in the Database</li>
+                    <li>Takes as Input > 1-Argument: <code>user_info</code> > In Hash Datatype</li>
+                    <li>Checks the <code>user_info</code> for the existence of the user's email address</li>
+                    <li>Checks for the existence of the <code>user_info</code> in the Database using the <code>check_duplicates()</code> Method</li>
                     <li>Sends the SQL-Query using <code>user_info</code> to create a new user in the Database</li>
                     <li>Checks whether the new user has been created in the Database</li>
                     <li>Returns as Output > :</li>
