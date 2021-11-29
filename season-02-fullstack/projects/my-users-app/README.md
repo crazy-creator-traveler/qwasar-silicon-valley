@@ -131,7 +131,7 @@
                 <p>This Method is used to > Convert an Array Data type to a Hash Data type with the addition of keys.</p>
                 <span>The Algorithm of the Method:</span>
                 <ol type ="1">
-                    <li>Takes as Input > 1-Argument: <code>array</code> > In Array Data type</li>
+                    <li>Takes as Input > 1-Argument: <code>array</code> > In Array Datatype</li>
                     <li>Creates special Keys</li>
                     <li>Converts <code>array</code> Argument to a Hash with the addition of Keys</li>
                     <li>Returns as Output > Hash Data type</li>
@@ -170,7 +170,7 @@
                 <p>This Method is used to > Retrieve User Data from the Database.</p>
                 <span>The Algorithm of the Method:</span>
                 <ol type="1">
-                    <li>Takes as Input > 1-Argument: <code>uniq_user_id</code> > In Integer Data type</li>
+                    <li>Takes as Input > 1-Argument: <code>uniq_user_id</code> > In Integer Datatype</li>
                     <li>Sends the SQL-Query using <code>uniq_user_id</code> to retrieve user data from the Database</li>
                     <li>Checks the Received Array from the Database > For the existence of user data</li>
                     <li>Converts the Received Array from the Database > Into a Hash Data with the addition of keys</li>
