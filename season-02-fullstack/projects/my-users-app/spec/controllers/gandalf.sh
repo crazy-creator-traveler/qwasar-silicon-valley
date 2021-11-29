@@ -2,9 +2,7 @@
 #   Gandalf > For Testing Program Code > app.rb
 #
 # NOTE:
-#   - Command:
-#           ./gandalf.sh
-#                       ==> To run TESTER
+#    All necessary info contained in README.md
 # # #
 
 HOST="localhost:8090"
