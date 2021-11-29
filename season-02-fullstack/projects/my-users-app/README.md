@@ -46,8 +46,9 @@
         <li><h3>Installing && Running The Web-Application</h3></li>
             <ol type="1">
                 <li><b>Clone the repository</b></li>
-                    <p><code>$ git clone git@github.com:Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
-                    <p>(This information will be updated soon)</p><br>
+                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                    <p><code>$ cd qwasar-silicon-valley</code></p>
+                    <p><code>$ git sparse-checkout set season-02-fullstack/projects/my-users-app</code></p><br>
                 <li><b>Make sure the Ruby-Programming Language is installed</b></li>
                     <p><code>$ ruby -v</code></p>
                     <span>Your Terminal should display the Ruby version something like this:</span>
@@ -61,8 +62,8 @@
                     <p><code>$ Bundler version 2.2.29</code></p>
                     <span>Otherwise, you will need to install Bundle Gem</span>
                     <p><code>$ gem install bundler</code></p><br>
-                <li><b>Move to <code>my_users_app</code> Directory</b></li>
-                    <p><code>$ cd my_users_app</code></p><br>
+                <li><b>Move to <code>my-users-app</code> Directory</b></li>
+                    <p><code>$ cd season-02-fullstack/projects/my-users-app</code></p><br>
                 <li><b>Run the following command to install all the required Gems that are listed in the Gemfile</b></li>
                     <p><code>$ bundle install</code></p><br>
                 <li><b>Move to <code>app/сontrollers</code> Directory and Run the Web-Server</b></li>
@@ -80,7 +81,9 @@
                     <li>Open an additional Terminal window and Move to <code>spec/controllers</code> Directory</li>
                         <p><code>$ cd spec/controllers</code></p><br>
                     <li>Run the tests gandalf.sh</li>
-                        <p><code>$ sh gandalf.sh</code></p><br>
+                        <p><code>$ sh gandalf.sh</code></p>
+                        <p>or</p>
+                        <p><code>$ ./gandalf.sh</code></p><br>
                 </ol>
                 <li><b>Running tests to test the Program Code > my_user_model.rb</b></li>
                 <ol type="1">
