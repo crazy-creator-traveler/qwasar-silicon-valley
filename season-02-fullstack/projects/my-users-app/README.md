@@ -55,6 +55,10 @@
                     <p><code>$ ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux]</code></p>
                     <p>Otherwise, you will need to install Ruby > Follow this link
                         <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">Ruby Installation Guide</a>
+                    </p>
+                     <h4>NOTE:</h4>
+                     <p>Your Ruby-Version should be ~> 3.0.0<br>
+                        This is saying that any version of 3.0.x where x is greater than or equal to 0 are valid.
                     </p><br>
                 <li><b>Make sure the Bundle Gem is installed</b></li>
                     <p><code>$ bundle -v</code></p>
