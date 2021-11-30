@@ -1,13 +1,12 @@
 =begin
-    Gemfile > Contains all the necessary GEMS for this Project !
+        Gemfile > Contains all the necessary GEMS for this Project!
 
 NOTE:
-    - Command:
-        bundle install 
-                    ==> To install all the necessary Gems
+    All necessary info contained in README.md
 =end
-
 source "https://rubygems.org"
+
+ruby "~> 3.0.0"
 
 gem "sqlite3"
 gem "sinatra"
