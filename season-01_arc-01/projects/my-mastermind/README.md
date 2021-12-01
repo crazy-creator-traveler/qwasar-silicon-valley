@@ -14,7 +14,20 @@
     <p><b>My Mastermind</b> is implementation of the famous Mastermind Game.</p>
     <p>It is a console game fully implemented in the C-Programming Language.</p><br>
     <h3>Game Instruction</h3>
-    <p>Soon ...</p>
+    <p>The game consists of:</p>
+    <ol>
+        <li>Two Players</li>
+        <ul>
+            <li>Mastermind</li>
+            <p>...</p>
+            <li>CodeBreaker</li>
+            <p>...</p><br>
+        </ul>
+        <li>Secret Code</li>
+        <p>...</p><br>
+        <li>Attempts</li>
+        <p>...</p>
+    </ol>
     <br>
 </div>
 <hr>
