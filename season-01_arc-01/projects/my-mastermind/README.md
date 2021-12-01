@@ -28,7 +28,7 @@
         <ul>
             <li>Only digits from 0-7.</li>
             <li>Only 4 Different digits.</li>
-        </ul><br>
+        </ul><br><br>
         <li>Attempts</li>
         <p>The number of Attempts to crack the Secret Code can be from 1 to 99 (10 Attempts are provided by default).</p>
         <p>After each input the game indicates to the CodeBreaker the number of:</p>
@@ -38,8 +38,8 @@
             <li>Misplased Pieces</li>
             <p>This means that the digit or digits are present in the Secret Code but the digit or digits are in the wrong sequence.</p>
         </ul>
-    </ol>
-    <p>If CodeBreaker cracks the Secret Code he or she wins and Game Stops.</p><br>
+    </ol><br>
+    <p>If CodeBreaker cracks the Secret Code he or she wins and Game Stops.</p>
 </div>
 <hr>
 
