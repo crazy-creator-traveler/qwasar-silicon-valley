@@ -18,10 +18,10 @@
     <ol>
         <li>Two Players</li>
         <ul>
-            <li>Mastermind</li>
-            <p>...</p>
+            <li>CodeMaker</li>
+            <p>This player must secretly сreate a Secret Code and provide information about the number of attempts to crack the Secret Code.</p>
             <li>CodeBreaker</li>
-            <p>...</p><br>
+            <p>This player must crack the Secret Code using a combination of deductive reasoning and trial and error in the game.</p><br>
         </ul>
         <li>Secret Code</li>
         <p>...</p><br>
