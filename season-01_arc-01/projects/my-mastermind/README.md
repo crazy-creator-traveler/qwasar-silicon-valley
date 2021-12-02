@@ -86,5 +86,9 @@
 <!--Technology Stack-->
 <div>
     <h2>Technology Stack</h2>
-    <p>Soon ...</p>
+    <ul>
+        <li>C-Programming Language</li>
+        <li>Makefile</li>
+        <li>Git | GitHub</li>
+    </ul>
 </div>
