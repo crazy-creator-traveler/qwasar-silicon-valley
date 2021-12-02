@@ -46,7 +46,23 @@
 <!--Getting Started-->
 <div>
     <h2>Getting Started</h2>
-    <p>Soon ...</p><br>
+    <ol type="1">
+        <li><h3>Installing The Game</h3></li>
+        <ol type="1">
+            <li><b>Clone the repository</b></li>
+                <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                <p><code>$ cd qwasar-silicon-valley</code></p>
+                <p><code>$ git sparse-checkout set season-01_arc-01/projects/my-mastermind</code></p><br>
+            <li><b>Move to <code>my-mastermind</code></b> Directory</li>
+                <p><code>$ cd season-01_arc-01/projects/my-mastermind</code></p>
+        </ol><br>
+        <li><h3>Running The Game</h3></li>
+        <ul>
+            <li>...</li>
+            <li>...</li>
+            <li>...</li>
+        </ul>
+    </ol>
 </div>
 <hr>
 
