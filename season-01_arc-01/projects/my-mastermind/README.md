@@ -58,10 +58,27 @@
         </ol><br>
         <li><h3>Running The Game</h3></li>
         <ul>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
-        </ul>
+            <li>Running with default parameters</li>
+                <p><code>$ cd app</code></p>
+                <p><code>$ ./my_mastermind</code></p>
+                <p> Secret Code: 5432 (Generated random)<br>
+                    Attempts   : 10 (By default)
+                </p><br>
+            <li>Running with user settings for the Secret Code</li>
+                <p><code>$ cd app</code></p>
+                <p><code>$ ./my_mastermind -c "1234"</code></p>
+                <p> Secret Code: 1234<br>
+                    Attempts   : 10 (By default)
+                </p><br>
+            <li>Running with user settings for the Attempts</li>
+                <p><code>$ cd app</code></p>
+                <p><code>$ ./my_mastermind -t "20"</code></p>
+                <p> Secret Code: 5432 (Generated Random)<br>
+                Attempts   : 20
+                </p>
+        </ul><br>
+        <h4>NOTE:</h4>
+        <p>You can't run the game with user settings for the Secret Code && Attempts at the same time!</p>
     </ol>
 </div>
 <hr>
