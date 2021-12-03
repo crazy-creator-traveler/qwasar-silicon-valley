@@ -53,25 +53,25 @@
                 <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
                 <p><code>$ cd qwasar-silicon-valley</code></p>
                 <p><code>$ git sparse-checkout set season-01_arc-01/projects/my-mastermind</code></p><br>
-            <li><b>Move to <code>my-mastermind</code></b> Directory</li>
-                <p><code>$ cd season-01_arc-01/projects/my-mastermind</code></p>
+            <li><b>Move to <code>my-mastermind</code> Directory</b></li>
+                <p><code>$ cd season-01_arc-01/projects/my-mastermind</code></p><br>
+            <li><b>Move to <code>app</code> Directory and Compile all the required files</b></li>
+                <p><code>$ cd app</code></p>
+                <p><code>$ make</code></p>
         </ol><br>
         <li><h3>Running The Game</h3></li>
         <ul>
             <li>Running with default parameters</li>
-                <p><code>$ cd app</code></p>
                 <p><code>$ ./my_mastermind</code></p>
                 <p> Secret Code: 5432 (Generated random)<br>
                     Attempts   : 10 (By default)
                 </p><br>
             <li>Running with user settings for the Secret Code</li>
-                <p><code>$ cd app</code></p>
                 <p><code>$ ./my_mastermind -c "1234"</code></p>
                 <p> Secret Code: 1234<br>
                     Attempts   : 10 (By default)
                 </p><br>
             <li>Running with user settings for the Attempts</li>
-                <p><code>$ cd app</code></p>
                 <p><code>$ ./my_mastermind -t "20"</code></p>
                 <p> Secret Code: 5432 (Generated Random)<br>
                 Attempts   : 20
