@@ -39,7 +39,11 @@
             <p>This means that the digit or digits are present in the Secret Code but the digit or digits are in the wrong sequence.</p>
         </ul>
     </ol><br>
-    <p>If CodeBreaker cracks the Secret Code he or she wins and Game Stops.</p>
+    <p>If CodeBreaker cracks the Secret Code he or she wins and Game Stops.</p><br>
+    <h3>Additional Sources:</h3>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=wsYPsrzCKiA"><b>Information about Mastermind && How to play Mastermind</b></a></li>
+    </ul>
 </div>
 <hr>
 
