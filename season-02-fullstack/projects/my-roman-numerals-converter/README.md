@@ -34,7 +34,7 @@
                     <p><code>$ git sparse-checkout set season-02-fullstack/projects/my-roman-numerals-converter</code></p><br>
                 </li>
                 <li><b>Move to <code>my-roman-numerals-converter</code> Directory</b>
-                    <p><code>$ cd season-02-fullstack/projects/my-users-app</code></p><br>
+                    <p><code>$ cd season-02-fullstack/projects/my-roman-numerals-converter</code></p><br>
                 </li>
             </ol>
         </li><br>
