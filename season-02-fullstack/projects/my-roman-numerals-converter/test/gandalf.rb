@@ -26,9 +26,9 @@ def main()
     number_5 = 000;   expected_data_5 = ""
     number_6 = 01;    expected_data_6 = "I"
     number_7 = 007;   expected_data_7 = "VII"
-    number_8 = 7777;  expected_data_8 = "Invliad number, please enter number from 1 - 3000" # or VMMDCCLXXVII
+    number_8 = 7777;  expected_data_8 = "Invliad number, please enter number from 1 - 3999" # or VMMDCCLXXVII
     number_9 = 3000;  expected_data_9 = "MMM"
-    number_10 = "ad"; expected_data_10 = "Invalid data! Please enter a number in an integer data type from 1 - 3000"
+    number_10 = "ad"; expected_data_10 = "Invalid data! Please enter a number in an integer data type from 1 - 3999"
 
     gandalf(my_roman_numerals_converter(number_1), expected_data_1)
     gandalf(my_roman_numerals_converter(number_2), expected_data_2)
