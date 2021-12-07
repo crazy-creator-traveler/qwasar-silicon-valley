@@ -25,7 +25,21 @@
 <!--Getting Started-->
 <div>
     <h2>Getting Started</h2>
-    <p>Soon ...</p><br>
+    <ol type="1">
+        <li><h3>Installing The Software</h3>
+            <ol type="1">
+                <li><b>Clone the repository</b>
+                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                    <p><code>$ cd qwasar-silicon-valley</code></p>
+                    <p><code>$ git sparse-checkout set season-02-fullstack/projects/my-roman-numerals-converter</code></p><br>
+                </li>
+                <li><b>Move to <code>my-roman-numerals-converter</code> Directory</b>
+                    <p><code>$ cd season-02-fullstack/projects/my-users-app</code></p><br>
+                </li>
+            </ol>
+        </li><br>
+        <li><h3>Running The Built-In Test</h3></li>
+    </ol>
 </div>
 <hr>
 
