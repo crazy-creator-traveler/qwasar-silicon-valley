@@ -11,7 +11,14 @@
 <!--Project Description-->
 <div>
     <h2>Project Description</h2>
-    <p>Soon ...</p><br>
+    <p><b>My Roman Numerals Converter</b> is a software that converts Arabic numerals to Roman numerals.</p>
+    <p>The software can convert numbers from 1 - 3999. It is not necessary to be able to convert numbers greater than 3999. Since the Romans themselves didn't seek to use numbers higher than 3000.</p>
+    <br>
+    <h3>Additional Sources:</h3>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Roman_numerals"><b>Wikipedia > Information about Roman Numerals</b></a></li>
+        <li><a href="http://www.novaroma.org/via_romana/numbers.html"><b>Nova Roma > Information about Roman Numerals</b></a></li>
+    </ul>
 </div>
 <hr>
 
