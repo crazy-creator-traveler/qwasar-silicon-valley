@@ -75,7 +75,7 @@ def roman_thousand(num)
     when 0..3
         thousand += ("M" * thousand_num) + roman_hundred(hundred)
     else
-        thousand = "Invliad number, please enter number from 1 - 3000"
+        thousand = "Invliad number, please enter number from 1 - 3999"
     end 
     return thousand
 end
@@ -94,10 +94,10 @@ def my_roman_numerals_converter(number)
         when 4  # if length is 4
             roman = roman_thousand(number) 
         else    # if length is grather than 4
-            roman = "Invliad number, please enter number from 1 - 3000" # return an invalid message
+            roman = "Invliad number, please enter number from 1 - 3999" # return an invalid message
         end
         return roman
     else
-        return "Invalid data! Please enter a number in an integer data type from 1 - 3000"
+        return "Invalid data! Please enter a number in an integer data type from 1 - 3999"
     end
 end
