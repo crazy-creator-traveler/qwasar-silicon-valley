@@ -38,7 +38,16 @@
                 </li>
             </ol>
         </li><br>
-        <li><h3>Running The Built-In Test</h3></li>
+        <li><h3>Running The Built-In Test</h3>
+            <ol type="1">
+                <li><b>Move to <code>test</code> Directory</b>
+                    <p><code>$ cd test</code></p><br>
+                </li>
+                <li><b>Run the tests gandalf.rb</b>
+                    <p><code>$ ruby gandalf.rb</code></p>
+                </li>
+            </ol>
+        </li>
     </ol>
 </div>
 <hr>
