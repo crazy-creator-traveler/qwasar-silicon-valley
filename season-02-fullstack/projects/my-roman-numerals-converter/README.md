@@ -55,6 +55,8 @@
 <!--Technology Stack-->
 <div>
     <h2>Technology Stack</h2>
-    <p>Soon ...</p><br>
+    <ul>
+        <li>Ruby</li>
+        <li>Git | GitHub</li>
+    </ul>
 </div>
-<hr>
