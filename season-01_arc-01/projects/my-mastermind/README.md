@@ -54,7 +54,7 @@
         <li><h3>Installing The Game</h3></li>
         <ol type="1">
             <li><b>Clone the repository</b></li>
-                <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/crazy-creator-traveler/qwasar-silicon-valley.git</code></p>
                 <p><code>$ cd qwasar-silicon-valley</code></p>
                 <p><code>$ git sparse-checkout set season-01_arc-01/projects/my-mastermind</code></p><br>
             <li><b>Move to <code>my-mastermind</code> Directory</b></li>
