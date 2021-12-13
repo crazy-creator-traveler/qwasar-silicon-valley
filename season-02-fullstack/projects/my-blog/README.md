@@ -57,9 +57,9 @@
                         </li>
                     </ul><br>
                 </li><br>
-                <li><b>Article</b>
+                <li><h4>Article</h4>
                     <ul>
-                        <li><b>Article < ApplicationRecord</b>
+                        <li><h5>Article < ApplicationRecord</h5>
                             <ul>
                                 <li><b>Method <code>new(title:string, body:text)</code></b>
                                     <p>This Method is used to > ...</p>
@@ -71,10 +71,10 @@
                                 </li><br>
                             </ul><br>
                         </li>
-                        <li><b>Article</b></li>
+                        <li><h5>Article</h5></li>
                     </ul><br>
                 </li>
-                <li><b>Class_Name</b>
+                <li><h4>Class_Name</h4>
                     <ul>
                         <li>1-Method</li>
                         <li>2-Method</li>
