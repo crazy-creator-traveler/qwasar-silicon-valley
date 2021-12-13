@@ -37,7 +37,15 @@
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li><br>
-                                <li><b>Method <code>save()</code></b>
+                                <li><b>Method <code>save</code></b>
+                                    <p>This Method is used to > ...</p>
+                                    <span>The Algorithm of the Method:</span>
+                                </li><br>
+                                <li><b>Method <code>find(id)</code></b>
+                                    <p>This Method is used to > ...</p>
+                                    <span>The Algorithm of the Method:</span>
+                                </li><br>
+                                <li><b>Method <code>all</code></b>
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li>
