@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "articles#index" # root route == http://localhost:3000
   get "/articles", to: "articles#index" # to: ".." > Starts searching in the Views-Component 
                                         # for the required html.erb file.
+  get "/articles/:id", to: "articles#show"
 end
