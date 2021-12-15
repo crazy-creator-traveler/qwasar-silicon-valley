@@ -27,67 +27,88 @@
 <div>
     <h2>The API Documentation</h2>
     <ul>
-        <li><h3>Classes</h3>
+        <li><h3>Internal API</h3>
+            <p>Soon ...</p>
             <ul>
-                <li><h4>ApplicationRecord</h4>
+                <li><h4>Classes</h4>
                     <ul>
-                        <li><h5>ApplicationRecord < ActiveRecord::Base</h5>
+                        <li><h5>ApplicationRecord</h5>
                             <ul>
-                                <li><b>Method <code>new(title:string, body:text)</code></b>
+                                <li><b>Method <code>method_name</code></b>
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li><br>
-                                <li><b>Method <code>save</code></b>
+                                <li><b>Method <code>method_name</code></b>
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li><br>
-                                <li><b>Method <code>find(id)</code></b>
+                            </ul>
+                        </li><br>
+                        <li><h5>ArticlesController</h5>
+                            <ul>
+                                <li><b>Method <code>index</code></b>
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li><br>
-                                <li><b>Method <code>all</code></b>
+                                <li><b>Method <code>show</code></b>
                                     <p>This Method is used to > ...</p>
                                     <span>The Algorithm of the Method:</span>
                                 </li>
                             </ul><br>
                         </li>
-                        <li><h5>ApplicationRecord</h5>
+                    </ul>
+                </li>
+            </ul>
+        </li><br>
+        <li><h3>External API</h3>
+            <p>Ruby on Rails API used by the project</p>
+            <ul>
+                <li><h4>Modules</h4>
+                    <ul>
+                        <li><h5>ActiveRecord</h5>
                             <ul>
-                                <li><b>Method <code></code></b>
-                                    <p>This Method is used to > ...</p>
-                                    <span>The Algorithm of the Method:</span>
+                                <li><h6>ActiveRecord::Base</h6>
+                                    <ul>
+                                        <li><b>Method <code>new(title:string, body:text)</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li><br>
+                                        <li><b>Method <code>save</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li><br>
+                                        <li><b>Method <code>find(id)</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li><br>
+                                        <li><b>Method <code>all</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li>
+                                    </ul>
                                 </li><br>
-                                <li><b>Method <code></code></b>
-                                    <p>This Method is used to > ...</p>
-                                    <span>The Algorithm of the Method:</span>
+                            </ul>
+                        </li><br>
+                        <li><h5>ActionController</h5>
+                             <ul>
+                                <li><h6>ActionController::Base</h6>
+                                    <ul>
+                                        <li><b>Method <code>method_name</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li>
+                                    </ul>
+                                </li><br>
+                            </ul>
+                        </li><br>
+                        <li><h5>ActionDispatch</h5>
+                            <ul>
+                                <li><h6>Class or Full path</h6>
+                                    <ul>
+                                        <li><b>Method <code>resources</code></b>
+                                            <p>This Method is used to > ...</p>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
-                    </ul><br>
-                </li><br>
-                <li><h4>Article</h4>
-                    <ul>
-                        <li><h5>Article < ApplicationRecord</h5>
-                            <ul>
-                                <li><b>Method <code>new(title:string, body:text)</code></b>
-                                    <p>This Method is used to > ...</p>
-                                    <span>The Algorithm of the Method:</span>
-                                </li><br>
-                                <li><b>Method <code>save()</code></b>
-                                    <p>This Method is used to > ...</p>
-                                    <span>The Algorithm of the Method:</span>
-                                </li><br>
-                            </ul><br>
-                        </li>
-                        <li><h5>Article</h5></li>
-                    </ul><br>
+                    </ul>
                 </li>
-                <li><h4>Class_Name</h4>
-                    <ul>
-                        <li>1-Method</li>
-                        <li>2-Method</li>
-                    </ul><br>
-                </li><br>
             </ul>
         </li>
     </ul><br>
