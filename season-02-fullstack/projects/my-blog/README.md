@@ -34,9 +34,14 @@
                     <ul>
                         <li><h5>ApplicationRecord</h5>
                             <ul>
-                                <li><b>Method <code>method_name</code></b>
-                                    <p>This Method is used to > ...</p>
+                                <li><b>Method <code>method_name</code></b><br>
+                                    <span>This Method is used to > ...</span><br><br>
                                     <span>The Algorithm of the Method:</span>
+                                    <ul>
+                                        <li>Takes as Input > ...</li>
+                                        <li>... > ...</li>
+                                        <li>Returns as Output > ...</li>
+                                    </ul><br>
                                 </li><br>
                                 <li><b>Method <code>method_name</code></b>
                                     <p>This Method is used to > ...</p>
