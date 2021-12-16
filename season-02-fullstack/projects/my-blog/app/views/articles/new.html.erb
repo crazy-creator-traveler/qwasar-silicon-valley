@@ -1,0 +1,21 @@
+<h1>New Article</h1>
+
+<!--Using a Form Builder-->
+<!--We will use a feature of Rails called a Form Builder to create our form.
+Using a Form Builder, we can write a minimal amount of code to output a form that is fully configured and follows Rails conventions.-->
+<!--To learn more about form builders > https://guides.rubyonrails.org/form_helpers.html-->
+<%= form_with model: @article do |form| %>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
