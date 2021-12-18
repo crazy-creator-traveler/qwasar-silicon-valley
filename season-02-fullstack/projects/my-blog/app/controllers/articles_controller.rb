@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
       else
         # The action redisplays the form by rendering app/views/articles/new.html.erb
         # with a status code 4XX for the app to work fine with Turbo.
-        render :new, status: :unprocessable_entity
+        render :new
       end
   end
 
@@ -64,7 +64,7 @@ class ArticlesController < ApplicationController
       else
         # The action redisplays the form by rendering app/views/articles/edit.html.erb
         # with a status code 4XX for the app to work fine with Turbo.
-        render :new, status: :unprocessable_entity
+        render :edit
       end
   end
 
