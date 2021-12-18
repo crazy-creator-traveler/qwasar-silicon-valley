@@ -1,0 +1,25 @@
+<!--Using a Form Builder-->
+<!--We will use a feature of Rails called a Form Builder to create our form.
+Using a Form Builder, we can write a minimal amount of code to output a form that is fully configured and follows Rails conventions.-->
+<!--To learn more about form builders > https://guides.rubyonrails.org/form_helpers.html-->
+<%= form_with model: article do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div><br>
+    <% end %>
+  </div><br>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

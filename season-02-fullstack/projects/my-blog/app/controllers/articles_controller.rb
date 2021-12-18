@@ -77,6 +77,23 @@ class ArticlesController < ApplicationController
       end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+      if @article.update(article_params)
+        # If the article is updated successfully
+        # the action redirects the browser to the article's page at "http://localhost:3000/articles/#{@article.id}"
+        redirect_to @article
+      else
+        # The action redisplays the form by rendering app/views/articles/edit.html.erb
+        # with a status code 4XX for the app to work fine with Turbo.
+        render :new, status: :unprocessable_entity
+      end
+  end
+
   private
     def article_params
       params.require(:article).permit(:title, :body)
