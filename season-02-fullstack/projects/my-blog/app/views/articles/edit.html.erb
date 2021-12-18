@@ -1,6 +1,16 @@
 <h1>Edit Article</h1>
 
 <!--A partial's filename must be prefixed with an underscore, e.g. _form.html.erb.
-But when rendering, it is referenced without the underscore, e.g. render "form".
-Thus, we refer to the _form.html.erb file-->
-<%= render "form", article: @article %>
+But when rendering, it is referenced without the underscore, e.g. render "form".-->
+
+<!--Method render() takes 2-arguments:
+1)"form"
+        ==> In the first argument, we pass the name of the partial file, thereby we are referencing the _form.html.erb file.
+2)article: @article
+        ==> In the second argument, we pass the hash value, thereby we initialize the local variable article, which we use in the file _form.html.erb.
+NOTE:
+If we want to initialize another local variable, then we simply add the third argument to the render() method.
+EXAMPLE:
+    render "form", article: @article, data: @data
+In the case that we have the instance variable @data in the controller.-->
+<%= render "form", article: @article %> <!--Equal to > render("form", {:article => @article})-->
