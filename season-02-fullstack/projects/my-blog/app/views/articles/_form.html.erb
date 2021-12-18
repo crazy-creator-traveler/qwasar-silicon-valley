@@ -1,3 +1,15 @@
+<!--This file contains a partial shared view for the routes:
+- get "/articles/new"
+- get "/articles/#{@article.id}/edit"
+A partial's filename must be prefixed with an underscore, e.g. _form.html.erb.
+But when rendering, it is referenced without the underscore, e.g. render "form".
+To learn more about partials, see Layouts and Rendering in Rails § Using Partials 
+https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials.-->
+
+<!--All occurrences of @article have been replaced with article.
+Because partials are shared code, it is best practice that they do not depend on specific instance variables set by a controller action.
+Instead, we will pass the article to the partial as a local variable.-->
+
 <!--Using a Form Builder-->
 <!--We will use a feature of Rails called a Form Builder to create our form.
 Using a Form Builder, we can write a minimal amount of code to output a form that is fully configured and follows Rails conventions.-->
