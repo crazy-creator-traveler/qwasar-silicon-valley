@@ -1,3 +1,4 @@
+<!--This file contains a partial shared view for the route: get 'articles/:id'-->
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
