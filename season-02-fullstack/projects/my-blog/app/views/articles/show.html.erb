@@ -1,3 +1,6 @@
+<!--NOTE:
+The @article object is available to any partials rendered in the view because we defined it as an instance variable.-->
+
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
 <ul>
@@ -6,6 +9,9 @@
 </ul>
 
 <h2>Comments</h2>
+<!--This will now render the partial view in app/views/comments/_comment.html.erb once for each comment that is in the @article.comments collection. 
+As the render method iterates over the @article.comments collection, it assigns each comment to a local variable named the same as the partial view,
+in this case > comment, which is then available in the partial view for us to show.-->
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
