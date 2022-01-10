@@ -2,9 +2,11 @@
 <h1>Our Articles</h1>
 <ul>
     <% @articles.each do |article| %>
-        <li>
-            <%= link_to(article.title, article) %> <!-- link_to() helper method > Returns "/articles/#{article.id}" when given an article.-->
-        </li>
+        <% unless article.archived? %>
+            <li>
+                <%= link_to(article.title, article) %> <!-- link_to() helper method > Returns "/articles/#{article.id}" when given an article.-->
+            </li>
+        <% end %>
     <% end %>
 </ul>
 
