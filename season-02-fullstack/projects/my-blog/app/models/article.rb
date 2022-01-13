@@ -5,8 +5,10 @@ NOTE:
 =end
 
 class Article < ApplicationRecord
+  # using the 'include' keyword to include the 'Visible' module.
+  # 'Visible' module is located in the /concerns/visible.rb file.
   include Visible
-  
+
 # Sets up an Active Record Association
 # Active Record Associations let us easily declare the relationship between two models:
 #   -comment
