@@ -30,6 +30,11 @@ Using a Form Builder, we can write a minimal amount of code to output a form tha
       <div><%= message %></div>
     <% end %>
   </div>
+  
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
 
   <div>
     <%= form.submit %>

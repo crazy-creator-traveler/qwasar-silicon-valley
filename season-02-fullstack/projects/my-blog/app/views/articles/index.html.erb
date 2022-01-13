@@ -1,11 +1,14 @@
 <!--Find me in app/views/articles/index.html.erb-->
-<h1>Our Articles</h1>
+<h1>Blog</h1>
+<p>Our blog has <%= Article.public_count %> articles and the number keeps growing!</p>
 <ul>
-    <% @articles.each do |article| %>
-        <li>
-            <%= link_to(article.title, article) %> <!-- link_to() helper method > Returns "/articles/#{article.id}" when given an article.-->
-        </li>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to(article.title, article) %> <!-- link_to() helper method > Returns "/articles/#{article.id}" when given an article.-->
+      </li>
     <% end %>
+  <% end %>
 </ul>
 
 <%= link_to "New Article", new_article_path %>
