@@ -26,6 +26,16 @@ Example:
                                   ==> articles/index.html.erb  
 =end
 class ArticlesController < ApplicationController
+  # http_basic_authenticate_with method blocks access to the various actions|features if the person is not authenticated.
+  # In our case, while the user is not authenticated, user will not be able to access features such as: creating a article, updating a article, deleting a article.
+  # NOTE: 
+  #   Right now, in our code, we are passing static arguments to the method
+  #   so it means that only a user with the > name: Sultan && password: Kyzyltau777
+  #   will be able to access all features.
+  #
+  #   Two popular authentication add-ons for Rails are the:
+  #     - Devise gem (rails engine) > https://github.com/heartcombo/devise
+  #     - Authlogic gem > https://github.com/binarylogic/authlogic
   http_basic_authenticate_with name: "Sultan", password: "Kyzyltau777", except: [:index, :show]
 
   def index
