@@ -15,6 +15,11 @@ class Article < ApplicationRecord
 # and
 #   -article
 # in this case we specify that > One article can have many comments.
+# 
+# Second argument:
+#   dependent: :destroy
+# serves to remove the comments associated with the article
+# otherwise they would simply occupy space in the database.
 # NOTE:
 #   if we have an instance variable @article containing an article
 #   we can retrieve all the comments belonging to that article as an array using @article.comments.
