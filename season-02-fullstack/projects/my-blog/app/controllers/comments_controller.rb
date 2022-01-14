@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  http_basic_authenticate_with name: "Sultan", password: "Kyzyltau777"
+  
   # We'll see a bit more complexity here than we did in the controller for articles.
   # That's a side-effect of the nesting that we've set up.
   def create
