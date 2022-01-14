@@ -26,6 +26,8 @@ Example:
                                   ==> articles/index.html.erb  
 =end
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "Sultan", password: "Kyzyltau777", except: [:index, :show]
+
   def index
     @articles = Article.all
   end
