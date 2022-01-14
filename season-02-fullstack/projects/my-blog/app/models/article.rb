@@ -19,7 +19,7 @@ class Article < ApplicationRecord
 #   if we have an instance variable @article containing an article
 #   we can retrieve all the comments belonging to that article as an array using @article.comments.
 #   For more info, about the Active Record Associations > https://guides.rubyonrails.org/v6.1/association_basics.html 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
 # Validations are rules that are checked before a model object is saved. 
 # If any of the checks fail:
