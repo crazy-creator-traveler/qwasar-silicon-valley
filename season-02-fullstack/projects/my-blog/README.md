@@ -12,7 +12,8 @@
 <!--Project Description-->
 <div>
     <h2>Project Description</h2>
-    <p>Soon ...</p><br>
+    <p><b>My Blog</b> is a web application that was implemented using the <b>Ruby on Rails</b> Framework.</p>
+    <p>The main goal of this project was to familiarize and implement a web application using the <b>Ruby on Rails</b> Framework.</p><br>
 </div>
 <hr>
 
