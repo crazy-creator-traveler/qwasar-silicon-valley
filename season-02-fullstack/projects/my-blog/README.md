@@ -33,6 +33,10 @@
 <!--Technology Stack-->
 <div>
     <h2>Technology Stack</h2>
-    <p>Soon ...</p><br>
+    <ul> 
+        <li>HTML5</li>
+        <li>Ruby > Ruby on Rails</li>
+        <li>Database > SQLite</li>
+        <li>Git | GitHub</li>
+    </ul>
 </div>
-<hr>
