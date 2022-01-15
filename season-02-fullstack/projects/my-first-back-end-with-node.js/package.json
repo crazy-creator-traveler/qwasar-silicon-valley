@@ -1,0 +1,30 @@
+{
+    "name": "app.js",
+    "version": "1.0.0",
+    "description": "My First Back-End Using Node.js",
+    "main": "app.js",
+    "scripts": {
+        "go": "node app/app.js", 
+        "songs": "curl -i http://localhost:8090; echo",
+        "b_date": "curl -i http://localhost:8090/birth_date; echo",
+        "b_city": "curl -i http://localhost:8090/birth_city; echo",
+        "wives": "curl -i http://localhost:8090/wives; echo",
+        "picture": "curl -i http://localhost:8090/picture; echo",
+        "public": "curl -i http://localhost:8090/public; echo",
+        "protected_сlosed": "curl -i http://localhost:8090/protected; echo",
+        "protected_opened": "curl -i http://admin:admin@localhost:8090/protected; echo"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Crazy-Creators-Zone/qwasar-silicon-valley.git"
+    },
+    "keywords": [
+        "crazy-wep-app"
+    ],
+    "author": "Sultan Kyzyltau",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-basic-auth": "^1.2.0"
+    }
+}

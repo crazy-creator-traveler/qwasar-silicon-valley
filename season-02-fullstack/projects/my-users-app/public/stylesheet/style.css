@@ -1,0 +1,63 @@
+/* TABLE */
+            /*      */
+.table-name
+{
+    text-align: center;
+}
+
+.table
+{
+    border-collapse: collapse;
+}
+
+.table__row-1
+{
+    background-color: gray;
+    color: yellow;
+
+    font-size: 20px;
+}
+
+.table__col-1
+{
+    width: 5%;
+    height: 22px;
+    padding: 10px;
+
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table__col-2
+{
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table__col-3
+{
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table__col-4
+{
+    width: 5%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table__col-5
+{
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+} /* TABLE-END */
+
+/*      */
+.note
+{
+    margin-top: 30px;
+}
