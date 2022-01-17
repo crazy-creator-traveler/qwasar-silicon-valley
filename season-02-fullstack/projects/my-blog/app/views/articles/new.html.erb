@@ -8,6 +8,8 @@ Using a Form Builder, we can write a minimal amount of code to output a form tha
     <div>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
+<!-- full_messages_for method returns an array of user-friendly error messages for a specified attribute.
+If there are no errors for that attribute, the array will be empty.-->
         <% @article.errors.full_messages_for(:title).each do |message| %>
             <div><%= message %></div>
         <% end %>
