@@ -64,6 +64,8 @@ class ArticlesController < ApplicationController
 #     > So it means that when executing these requests, the route is not explicitly displayed for users.
   def create 
     @article = Article.new(article_params)
+    # When we use the save method to save the data in the database
+    #   > Our validations set in article.rb are run just before that. 
       if @article.save
         # If the article is saved successfully
         # the action redirects the browser to the article's page at "http://localhost:3000/articles/#{@article.id}"
