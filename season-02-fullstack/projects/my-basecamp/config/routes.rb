@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home_pages#index"
-  
+
   get "how-it-works", to: "home_pages#how_it_works"
+  
+  get "before-and-after", to: "home_pages#before_and_after"
 end
