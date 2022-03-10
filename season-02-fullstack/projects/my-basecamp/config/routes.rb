@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "/features", to: "home_pages#features"
 
   get "features/clients", to: "home_pages#clients"
+  
+  get "/pricing", to: "home_pages#pricing"
 end
