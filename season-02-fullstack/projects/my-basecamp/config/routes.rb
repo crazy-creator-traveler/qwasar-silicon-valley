@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/before-and-after", to: "home_pages#before_and_after"
 
   get "/features", to: "home_pages#features"
+
+  get "features/clients", to: "home_pages#clients"
 end
