@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home_pages#index"
 
+  resources :users
+
   devise_for :users
 
   get "/how-it-works", to: "home_pages#how_it_works"
