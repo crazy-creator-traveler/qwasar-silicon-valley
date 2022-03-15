@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home_pages#index"
 
-  resources :users
+  resources :users, only: :index # or :only => [:index]
 
   devise_for :users
 
