@@ -34,8 +34,12 @@ Rails.application.routes.draw do
   scope '/' do
     get "/how-it-works", to: "home_pages#how_it_works"
     get "/before-and-after", to: "home_pages#before_and_after"
-    get "/features", to: "home_pages#features"
-    get "/features/clients", to: "home_pages#clients"
+
+    scope "/features" do
+      get "/", to: "home_pages#features", as: :features
+      get "/clients", to: "home_pages#clients", as: :features_clients
+    end
+
     get "/pricing", to: "home_pages#pricing"
     get "/support", to: "home_pages#support"
   end
