@@ -31,15 +31,12 @@ Rails.application.routes.draw do
 
   devise_for :users, skip: :all
 
-  get "/how-it-works", to: "home_pages#how_it_works"
-
-  get "/before-and-after", to: "home_pages#before_and_after"
-
-  get "/features", to: "home_pages#features"
-
-  get "/features/clients", to: "home_pages#clients"
-
-  get "/pricing", to: "home_pages#pricing"
-
-  get "/support", to: "home_pages#support"
+  scope '/' do
+    get "/how-it-works", to: "home_pages#how_it_works"
+    get "/before-and-after", to: "home_pages#before_and_after"
+    get "/features", to: "home_pages#features"
+    get "/features/clients", to: "home_pages#clients"
+    get "/pricing", to: "home_pages#pricing"
+    get "/support", to: "home_pages#support"
+  end
 end
