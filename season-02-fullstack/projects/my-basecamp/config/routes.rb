@@ -18,10 +18,18 @@ Rails.application.routes.draw do
         put "/", to: "devise/passwords#update"
         post "/", to: "devise/passwords#create"
       end
+
+      get "/cancel", to: "devise/registrations#cancel", as: :cancel_user_registration
+      get "/sign-up", to: "devise/registrations#new", as: :new_user_registration
+      get "/account", to: "devise/registrations#edit", as: :edit_user_registration
+      patch "/", to: "devise/registrations#update", as: :user_registration
+      put "/", to: "devise/registrations#update"
+      delete "/", to: "devise/registrations#destroy"
+      post "/", to: "devise/registrations#create"
     end
   end
 
-  devise_for :users, skip: [:sessions, :password ]
+  devise_for :users, skip: :all
 
   get "/how-it-works", to: "home_pages#how_it_works"
 
@@ -30,7 +38,7 @@ Rails.application.routes.draw do
   get "/features", to: "home_pages#features"
 
   get "/features/clients", to: "home_pages#clients"
-  
+
   get "/pricing", to: "home_pages#pricing"
 
   get "/support", to: "home_pages#support"
