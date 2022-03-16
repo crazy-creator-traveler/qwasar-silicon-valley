@@ -3,6 +3,19 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home_pages#index"
 
+  scope "/" do
+    get "/how-it-works", to: "home_pages#how_it_works"
+    get "/before-and-after", to: "home_pages#before_and_after"
+
+    scope "/features" do
+      get "/", to: "home_pages#features", as: :features
+      get "/clients", to: "home_pages#clients", as: :features_clients
+    end
+
+    get "/pricing", to: "home_pages#pricing"
+    get "/support", to: "home_pages#support"
+  end
+
   devise_scope :user do
     scope "/user" do
       get "/", to: "users#index", as: :user_root
@@ -29,17 +42,4 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, skip: :all
-
-  scope '/' do
-    get "/how-it-works", to: "home_pages#how_it_works"
-    get "/before-and-after", to: "home_pages#before_and_after"
-
-    scope "/features" do
-      get "/", to: "home_pages#features", as: :features
-      get "/clients", to: "home_pages#clients", as: :features_clients
-    end
-
-    get "/pricing", to: "home_pages#pricing"
-    get "/support", to: "home_pages#support"
-  end
 end
