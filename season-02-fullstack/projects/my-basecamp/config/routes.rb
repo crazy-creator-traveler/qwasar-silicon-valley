@@ -5,7 +5,15 @@ Rails.application.routes.draw do
 
   resources :users, only: :index # or :only => [:index]
 
-  devise_for :users
+  devise_scope :user do
+    scope "/user" do
+      get "/sing-in", to: "devise/sessions#new", as: :new_user_session
+      post "/sing-in", to: "devise/sessions#create", as: :user_session
+      delete "/sign-out", to: "devise/sessions#destroy", as: :destroy_user_session
+    end
+  end
+
+  devise_for :users, skip: :sessions
 
   get "/how-it-works", to: "home_pages#how_it_works"
   
