@@ -167,7 +167,7 @@ body {
 [grid_col="col-12"] {
   grid-column: 12 span;
   border: 1px dotted red;
-} /* END GRID_COL="№1 Global Value"	*/
+} /* END GRID_COL="№1 Global Value" */
 
 
 /* GRID_COL="№2 Global Value" */
@@ -726,7 +726,7 @@ body {
 [grid_row="row-12"] {
   grid-row: 12 span;
   border: 1px dotted yellow;
-}	/* END GRID_ROW	*/
+} /* END GRID_ROW	*/
 
 
 /* MEDIA */
