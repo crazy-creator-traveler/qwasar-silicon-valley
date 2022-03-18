@@ -1,10 +1,10 @@
 /*
-	CSS Library RedM
-	Version: RedM-1.0.0
-	Author: Sultan Kyzyltau
-	GitHub: https://github.com/crazy-creator-traveler
-	E-mail: crazy.creator.traveler@gmail.com
-	Licence: MIT
+  CSS Library RedM
+  Version: RedM-1.0.0
+  Author: Sultan Kyzyltau
+  GitHub: https://github.com/crazy-creator-traveler
+  E-mail: crazy.creator.traveler@gmail.com
+  Licence: MIT
 */
 :root {
   box-sizing: border-box;
@@ -43,7 +43,7 @@ body {
 
   word-wrap: break-word;
   border: 3px dotted black;		
-}	/* END GRID_CONTAINER="MAIN" */
+} /* END GRID_CONTAINER="MAIN" */
 
 
 /* GRID_CONTAINER="HEADER" */
@@ -67,7 +67,7 @@ body {
 
   word-wrap: break-word;
   border: 7px dotted red;		
-}	/* END GRID_CONTAINER="HEADER" */
+} /* END GRID_CONTAINER="HEADER" */
 
 
 /* GRID_CONTAINER="FOOTER" */
@@ -88,7 +88,7 @@ body {
 
   word-wrap: break-word;
   border: 3px dotted black;
-}	/* END GRID_CONTAINER="FOOTER" */
+} /* END GRID_CONTAINER="FOOTER" */
 
 
 /* GRID_COL="№1 Global Value" */
@@ -167,7 +167,7 @@ body {
 [grid_col="col-12"] {
   grid-column: 12 span;
   border: 1px dotted red;
-}	/* END GRID_COL="№1 Global Value"	*/
+} /* END GRID_COL="№1 Global Value"	*/
 
 
 /* GRID_COL="№2 Global Value" */
@@ -238,8 +238,8 @@ body {
 
 
 [grid_col="1/13"] {
-  grid-column : 1/13;
-  border 		: 1px dotted red; 
+  grid-column: 1/13;
+  border: 1px dotted red; 
 }
 
 
@@ -380,7 +380,7 @@ body {
 
 [grid_col="4/6"] {
   grid-column: 4/6;
-  border  	: 1px dotted red;
+  border: 1px dotted red;
 }
 
 
@@ -647,7 +647,7 @@ body {
 [grid_col="12/13"] {
   grid-column: 12/13;
   border: 1px dotted red;
-}	/* END GRID_COL="№2 Global Value"	*/
+} /* END GRID_COL="№2 Global Value" */
 
 
 /* GRID_ROW */
@@ -762,4 +762,4 @@ body {
   [grid_container="main"] {
     max-width: 82.5rem;
   }
-}	/* END MEDIA */
+} /* END MEDIA */
