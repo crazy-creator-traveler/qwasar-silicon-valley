@@ -45,8 +45,11 @@ gem "bootsnap", require: false
 # Use Devise as a flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise] 
 gem "devise", "~> 4.8", ">= 4.8.1"
 
-# Use Sass to process CSS
-# gem "sassc-rails"
+# We all love working with Sass,
+# but compilation can take quite a long time for larger codebases using gem "sass-rails".
+# gem "sassc-rails" integrates the C implementation of Sass.
+# In one larger project, this made compilation 4x faster [https://github.com/sass/sassc-rails/]
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
