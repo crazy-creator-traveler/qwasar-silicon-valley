@@ -51,6 +51,9 @@ gem "devise", "~> 4.8", ">= 4.8.1"
 # In one larger project, this made compilation 4x faster [https://github.com/sass/sassc-rails/]
 gem "sassc-rails"
 
+# Use Bootstrap 5 [https://github.com/twbs/bootstrap-rubygem#a-ruby-on-rails]
+gem "bootstrap", "~> 5.1", ">= 5.1.3"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
