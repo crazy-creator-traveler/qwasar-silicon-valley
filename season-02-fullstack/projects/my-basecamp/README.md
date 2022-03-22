@@ -19,7 +19,7 @@
 <!--Getting Started-->
 <div>
   <h2>Getting Started</h2>
-  <p>Soon ...</p><br>
+  <p>Soon ...</p>
 </div>
 <hr>
 
