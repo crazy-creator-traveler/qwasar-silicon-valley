@@ -33,5 +33,12 @@
 <!--Technology Stack-->
 <div>
   <h2>Technology Stack</h2>
-  <p>Soon ...</p>
+  <ul> 
+    <li>HTML5</li>
+    <li>CSS3 > Bootstrap, RedM, Sass</li>
+    <li>JavaScript</li>
+    <li>Ruby > Ruby on Rails, Devise</li>
+    <li>Database > SQLite</li>
+    <li>Git | GitHub</li>
+  </ul>
 </div>
