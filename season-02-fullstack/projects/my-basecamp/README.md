@@ -12,7 +12,7 @@
 <!--Project Description-->
 <div>
   <h2>Project Description</h2>
-  <p>Soon ...</p><br>
+  <p><b>My Basecamp</b> is web-based software that implements the Basecamp project management tool.</p><br>
 </div>
 <hr>
 
