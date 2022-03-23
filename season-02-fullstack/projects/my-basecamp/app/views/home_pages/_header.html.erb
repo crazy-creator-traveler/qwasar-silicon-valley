@@ -20,3 +20,16 @@
     <li class="top-nav__list-item"><%= link_to 'Try it free', new_user_registration_path, class: "button" %></li>
   </ul>
 </nav>
+<input type="checkbox" id="hamburger" class="mobile-nav-checkbox app-android__hide">
+<label class="mobile-nav-button app-android__hide" for="hamburger" aria-label="menu"><span></span></label>
+<nav class="mobile-nav app-android__hide">
+  <ul class="mobile-nav__list">
+    <li class="mobile-nav__list-item"><%= link_to 'How it works', how_it_works_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Before & after', before_and_after_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Got clients?', features_clients_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Pricing', pricing_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Support', support_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Sign in', new_user_session_path, class: "mobile-nav__link" %></li>
+    <li class="mobile-nav__list-item"><%= link_to 'Try it free', new_user_registration_path, class: "button button--block push--top" %></li>
+  </ul>
+</nav>
