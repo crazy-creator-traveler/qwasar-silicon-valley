@@ -3,7 +3,32 @@
   <%= render "header" %>
 </header>
 <main>
-  <!--Under development-->
+  <section class="wrapper wrapper--intro">
+    <div class="grid grid--centered grid--formatted centered-medium">
+      <div class="star-banner grid__item grid__item--medium centered">
+        <div class="star-banner__item">
+          <%= image_tag "stars.svg", alt: "5 stars" %> “extremely user friendly”
+        </div>
+        <div class="star-banner__item">
+          <%= image_tag "stars.svg", alt: "5 stars" %> “perfect solution for remote teams”
+        </div>
+        <div class="star-banner__item">
+          <%= image_tag "stars.svg", alt: "5 stars" %> “truly amazing!”
+        </div>
+      </div>
+      <h1 class="heading heading--x-large flush--top grid__item grid__item--large">The All-In-One Toolkit for Working Remotely.</h1>
+      <p class="push_half--bottom">
+        <strong>Before My Basecamp:</strong> Projects feel scattered, things slip, it’s tough to see where things stand, and people are stressed.
+        <strong>After My Basecamp:</strong> Everything’s organized in one place, you’re on top of things, progress is clear, and a sense of calm sets in.
+      </p>
+      <div class="grid__item grid__item--medium push--bottom">      
+        <div class="cta push--top">
+          <%= link_to "Give My Basecamp a Try", pricing_path, class: "button button--primary" %>
+          <p class="x-small"><span data-signups="">3,184</span> companies signed up in the last week alone!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <footer>
   <%= render "footer" %>
