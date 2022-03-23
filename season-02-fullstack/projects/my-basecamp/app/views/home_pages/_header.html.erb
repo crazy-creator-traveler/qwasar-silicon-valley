@@ -1,13 +1,12 @@
 <!--This file contains a partial view for other routes-->
-<nav>
-  <a href="#basecapm"><h1>Basecamp</h1></a>
-  <ul>
-    <li><%= link_to 'How it works', how_it_works_path %></li>
-    <li><%= link_to 'Before & after', before_and_after_path %></li>
-    <li><%= link_to 'Got clients?', features_clients_path %></li>
-    <li><%= link_to 'Pricing', pricing_path %></li>
-    <li><%= link_to 'Support', support_path %></li>
-    <li><%= link_to 'Sign in', new_user_session_path %></li>
-    <li><%= link_to 'Try it free', new_user_registration_path %></li>
+<nav class="top-nav app-android__hide" role="navigation" id="top">
+  <ul class="top-nav__list">
+    <li class="top-nav__list-item"><%= link_to 'How it works', how_it_works_path, class: "top-nav__link" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Before & after', before_and_after_path, class: "top-nav__link" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Got clients?', features_clients_path, class: "top-nav__link" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Pricing', pricing_path, class: "top-nav__link" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Support', support_path, class: "top-nav__link" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Sign in', new_user_session_path, class: "button button--secondary" %></li>
+    <li class="top-nav__list-item"><%= link_to 'Try it free', new_user_registration_path, class: "button" %></li>
   </ul>
 </nav>
