@@ -1,0 +1,2170 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: calc(1.6em + 0.5vw);
+  font-display: swap;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #1d2d35;
+  background-color: #fff;
+}
+
+@media (min-width: 57.5em) {
+  body {
+    font-size: calc(1.1em + 0.85vw);
+  }
+}
+
+@media (min-width: 89.5em) {
+  body {
+    font-size: 2.32em;
+  }
+}
+
+body .app-android__show {
+  display: none;
+}
+
+body.android .app-android__hide {
+  display: none !important;
+}
+
+body.android .app-android__show {
+  display: inherit !important;
+}
+
+body .ios #top, body .ios .footer {
+  display: none;
+}
+
+main {
+  display: block;
+}
+
+a {
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  transition: all 0.2s ease;
+  transition-property: text-decoration-thickness, text-decoration-width, -webkit-text-decoration-color;
+  transition-property: text-decoration-color, text-decoration-thickness, text-decoration-width;
+  transition-property: text-decoration-color, text-decoration-thickness, text-decoration-width, -webkit-text-decoration-color;
+  text-decoration-thickness: 0.1em;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  -webkit-text-decoration-color: #ffe000;
+          text-decoration-color: #ffe000;
+  text-decoration-thickness: 0.2em;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 2em 0 0.25em 0;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1, .h1 {
+  margin: 0.5em 0;
+  font-size: 250%;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+h2, .h2 {
+  font-size: 160%;
+}
+
+h3, .h3 {
+  font-size: 120%;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  font-size: 100%;
+  line-height: 1.25;
+}
+
+p, ul, ol {
+  margin: 0 0 1em 0;
+  padding: 0;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+ul, ol {
+  list-style-position: outside;
+}
+
+li {
+  margin: 0 0 0.5em 0;
+}
+
+ul li ul, ul li ol, ol li ol, ol li ul {
+  margin: 0.5em 0 1em 1em;
+}
+
+small, .small {
+  font-size: 75%;
+  line-height: 1.5;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+figure {
+  margin: 0.5em auto 2em auto;
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  margin: 0.5em 0 0 0;
+  font-size: 75%;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: none;
+}
+
+hr {
+  display: block;
+  clear: both;
+  width: 33%;
+  height: 0.1rem;
+  margin: 3em auto;
+  padding: 0;
+  border: 0;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+label {
+  display: block;
+  margin: 1em 0 0 0;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+input[type=text], input[type=email], input[type=password], textarea {
+  transition: all 0.2s ease;
+  display: block;
+  width: 100%;
+  margin: 0 0 0.25em 0;
+  padding: 0.7em 0.5em;
+  font-family: monospace;
+  font-size: 85%;
+  border: 0.2rem solid #1d2d35;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: #ffe000 !important;
+}
+
+input[type=file] {
+  margin: 0 0 0.25em 0;
+}
+
+select {
+  width: 100%;
+  margin: 0 0 0.25em 0;
+  font-size: 85%;
+  font-family: inherit;
+  vertical-align: middle;
+}
+
+@keyframes field-shake {
+  10%, 30%, 50%, 70%, 90% {
+    text-indent: 0.25em;
+  }
+  20%, 40%, 60%, 80% {
+    text-indent: 0.75em;
+  }
+}
+
+@-webkit-keyframes field-shake {
+  10%, 30%, 50%, 70%, 90% {
+    text-indent: 0.25em;
+  }
+  20%, 40%, 60%, 80% {
+    text-indent: 0.75em;
+  }
+}
+
+@supports (display: grid) {
+  .deckle-mask-beige {
+    position: relative;
+    padding-bottom: 6em !important;
+    margin-bottom: -4em !important;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .deckle-mask-beige:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    left: 0;
+    right: 0;
+    bottom: -0.1em;
+    z-index: 1;
+    background: url(/assets/general/deckle-edge-bottom-beige-7c5edb40f7f1178105075f5b9400ef18afe467b52e26e22bd8797851d150b42a.svg) center bottom/105% 100% no-repeat;
+  }
+}
+
+.bg-butcher-paper {
+  background-color: #fbf7f0;
+  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat, #fbf7f0 url(/assets/general/deckle-edge-top-9d85acf0c50449780017c5d173b40455be2a116277f45c7f177a3203dde06a40.svg) center top -0.1rem/105% no-repeat;
+}
+
+.bg-butcher-paper-bottom {
+  background-color: #fbf7f0;
+  background: #fbf7f0 url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat;
+}
+
+.bg-ink-paper {
+  background-color: #1d2d35;
+  color: #fff;
+  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat, #1d2d35 url(/assets/general/deckle-edge-top-9d85acf0c50449780017c5d173b40455be2a116277f45c7f177a3203dde06a40.svg) center top -0.1rem/105% no-repeat;
+}
+
+.button {
+  transition: all 0.2s ease;
+  transition-property: color, background-color, border-color;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #1d2d35;
+  color: #fff;
+  font-size: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: normal;
+  -webkit-appearance: none;
+  border: 0.1em solid #1d2d35;
+  border-radius: 0;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .button {
+    margin-bottom: 0.5em;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button:visited {
+  color: #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button:hover {
+  color: #ffe000;
+  background-color: #1d2d35;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--primary {
+  color: #1d2d35;
+  background-color: #ffe000;
+  border-color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--primary:visited {
+  color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--primary:hover {
+  color: #ffe000;
+  border-color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--secondary {
+  background-color: transparent;
+  color: #1d2d35;
+  border-color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--secondary:link, .button--secondary:visited {
+  background-color: transparent;
+  color: #1d2d35;
+  border-color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--secondary:hover {
+  background-color: transparent;
+  color: #1d2d35;
+  border-color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--stacked {
+  padding: 0.75em 1em;
+  line-height: 1;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--small {
+  font-size: 85%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--huge {
+  font-size: 120%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.button--block {
+  min-width: 100% !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .button--block-mobile {
+    min-width: 100% !important;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.error input, .error select, .error textarea {
+  border-color: #e55235;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.error input[type=file] {
+  border: 0.2rem solid #e55235;
+  padding: 0.1em;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.error span.error {
+  display: block;
+  margin-bottom: 1em;
+  color: #e55235;
+  font-size: 75%;
+  font-weight: normal;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.multi-form {
+  margin: 0;
+  text-align: left;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.multi-form__block {
+  margin: 3em 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.multi-form__label {
+  margin: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.multi-form__note {
+  margin: 0.25em 0 0.5em 0;
+  font-size: 75%;
+  font-family: monospace;
+  font-weight: normal;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.multi-form__required {
+  padding: 0.25em 0.5em;
+  font-size: 55%;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #1d2d35;
+  background-color: #ffe000;
+  border-radius: 1em;
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .image-size-75 {
+    max-width: 75%;
+    width: 75%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.image-size-100 {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.image-size-auto {
+  max-width: auto;
+  width: auto;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.shadow {
+  box-shadow: -0.4rem 0.4rem 2rem rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border: 0.2rem solid #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.shadow--dark {
+  box-shadow: -0.4rem 0.4rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.image-screenshot {
+  width: 100%;
+  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.image-deckle-edge {
+  position: relative;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.image-deckle-edge:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5em;
+  bottom: 0;
+  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom/105% no-repeat;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review {
+  margin: 2em 0 0 0;
+  display: inline-block;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review p {
+  margin: 0;
+  padding: 0;
+  font-size: 85%;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review cite {
+  display: block;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  font-size: 75%;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review--big {
+  display: block;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review--big p {
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 160%;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.review--big cite {
+  font-weight: normal;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.broadsheet {
+  margin: 1em 0;
+  padding: 0;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .broadsheet {
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push {
+  margin: 1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push--top {
+  margin-top: 1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push--bottom {
+  margin-bottom: 1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_half {
+  margin: 0.5em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_half--top {
+  margin-top: 0.5em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_half--bottom {
+  margin-bottom: 0.5em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_quarter--top {
+  margin-top: 0.25em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_quarter--bottom {
+  margin-bottom: 0.25em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_double {
+  margin: 2em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_double--top {
+  margin-top: 2em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.push_double--bottom {
+  margin-bottom: 2em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.flush {
+  margin: 0 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.flush--top {
+  margin-top: 0 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.flush--bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.pull {
+  margin: -1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.pull--top {
+  margin-top: -1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.pull--bottom {
+  margin-bottom: -1em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.heading {
+  margin: 0 0 0.25em 0;
+  font-size: 250%;
+  line-height: 1.05;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .heading--x-large {
+    font-size: 330%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.heading--xx-large {
+  font-size: 330%;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .heading--xx-large {
+    margin: 0 0 0.2em 0;
+    font-size: 390%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.heading--xxx-large {
+  font-size: 330%;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .heading--xxx-large {
+    margin: 0 0 0.1em 0;
+    font-size: 515%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.heading--tight {
+  line-height: 0.9;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.subheading {
+  margin: 2em 0 0.25em 0;
+  font-size: 160%;
+  line-height: 1.125;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.xx-small {
+  font-size: 65%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.x-small {
+  font-size: 75%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.small {
+  font-size: 85%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.medium {
+  font-size: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.large {
+  font-size: 120%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.x-large {
+  font-size: 160%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.unbold {
+  font-weight: normal;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.anchor-link, .anchor-link:hover, .anchor-link:visited {
+  color: #1d2d35;
+  text-decoration: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.hidden-anchor {
+  display: block;
+  position: relative;
+  top: -10rem;
+  visibility: hidden;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.checklist {
+  font-weight: 700;
+  list-style-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='13' viewBox='0 0 18 13' width='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m5.984 12.266-5.25-5.11c-.375-.344-.375-.687 0-1.03l1.032-1.032c.375-.344.734-.344 1.078 0l3.656 3.61 8.156-7.97c.344-.343.703-.343 1.078 0l1.032.985c.375.342.375.685 0 1.03l-9.75 9.562c-.344.312-.688.296-1.032-.047z' fill='%231d2d35' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.checklist li {
+  margin: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.sketch-rule {
+  width: 100%;
+  height: 0.4em;
+  margin: 3em 0;
+  border: 0;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 119 6'%3E%3Cpath d='M119 3.8c-60 2.5-33.5-7-119 0' fill='none' stroke='%231d2d35' stroke-width='2'/%3E%3C/svg%3E") center/5em 100% repeat-x;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.stacked-list {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.stacked-list li:before {
+  display: block;
+  margin: 1em 0 0 0;
+  counter-increment: section;
+  content: counter(section);
+  font-size: 160%;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.linebreak {
+  display: none;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .linebreak {
+    display: block;
+  }
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.centered {
+  text-align: center !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .centered-small {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .centered-medium {
+    text-align: center !important;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.txt-left {
+  text-align: left !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.segue {
+  position: relative;
+  margin: 2em 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.segue:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  top: 50%;
+  margin: 0;
+  z-index: -1;
+  background-color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.segue__text {
+  padding: 0 1em;
+  z-index: 1;
+  background-color: #fff;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .text-clipping {
+    background-color: #fff;
+    box-shadow: -0.5rem 0 0 #fff, 0.7rem 0 0 #fff;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .text-clipping--padded {
+    padding: 0.25em 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.highlight {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(-100deg, rgba(255, 224, 0, 0.3), rgba(255, 224, 0, 0.7) 95%, rgba(255, 224, 0, 0.1));
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.highlight--dark {
+  background-image: linear-gradient(-100deg, rgba(93, 47, 134, 0.3), rgba(93, 47, 134, 0.7) 95%, rgba(93, 47, 134, 0.1));
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.sketch-underline {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='119' height='6' viewBox='0 0 119 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M117.434 3.853C59.027 5.933 84.784-2.46 1.566 3.436' stroke='%23fc0' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") bottom left/100% 0.75rem no-repeat;
+  padding-bottom: 0.1rem;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.scribble-underline {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' viewBox='0 0 283.22 16.05' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m20.43 4.25a2297.57 2297.57 0 0 0 256.32-3.25l-249.82 14.05 255.29-6.79c-93.75 3.31-187.46-.38-281.22 2.94' fill='none' stroke='%231d2d35' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E") bottom center/100% 0.2em no-repeat;
+  padding-bottom: 0.05em;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+video {
+  width: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-embed {
+  height: 0;
+  margin: 0;
+  padding: 0 0 56.24% 0;
+  position: relative;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-embed iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr__video-wrapper {
+  background-color: #fff !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr--video .plyr__controls {
+  padding: 0.5rem !important;
+  background: rgba(216, 198, 166, 0.9) !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr__control--overlaid {
+  color: #1d2d35 !important;
+  background: rgba(255, 224, 0, 0.8) !important;
+  transform: translate(-50%, -50%) scale(1.5) !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr__control--overlaid:hover {
+  transform: translate(-50%, -50%) scale(2) !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr--full-ui input[type=range] {
+  color: #ffe000 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+  color: #1d2d35 !important;
+  background: #ffe000 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.plyr__control.plyr__tab-focus {
+  box-shadow: 0 0 0 5px rgba(255, 224, 0, 0.5) !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.wrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 4em 0;
+}
+
+@supports (display: grid) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .wrapper {
+    display: block;
+  }
+}
+
+@supports (display: grid) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .wrapper--fill {
+    min-height: 100vh;
+    justify-content: center;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.wrapper--intro {
+  padding: 7em 0 4em 0;
+}
+
+@supports (display: grid) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .wrapper--intro {
+    justify-content: center;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.android .wrapper--intro {
+  padding: 2em 0 4em 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.wrapper--flush-top {
+  padding-top: 0 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.wrapper--flush-bottom {
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .wrapper--flush-top-mobile {
+    padding-top: 0 !important;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 89.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid {
+    max-width: 100rem;
+  }
+}
+
+@supports (display: grid) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid {
+    margin: 0;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+  }
+  @media (min-width: 57.5em) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid {
+      grid-template-columns: repeat(3, 1fr) repeat(18, 2.45em) repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 89.5em) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid {
+      grid-template-columns: repeat(2, 1fr) repeat(20, 2.45em) repeat(2, 1fr);
+    }
+  }
+}
+
+@media print {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid--row {
+  grid-template-columns: repeat(24, 1fr) !important;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--row {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid--row {
+      display: grid;
+      grid-column-gap: 4%;
+    }
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid--row-reverse {
+  direction: rtl !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid--row-top {
+  align-items: start;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item {
+  grid-column: 3 / -3;
+  width: 100%;
+  direction: ltr;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item > img {
+  width: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item--half, .grid__item--third, .grid__item--two-thirds, .grid__item--quarter {
+  margin-top: 1em;
+}
+
+@media (min-width: 37.6em) {
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid__item--half, .grid__item--third, .grid__item--two-thirds, .grid__item--quarter {
+      grid-column-start: auto;
+    }
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--half {
+    width: 48%;
+  }
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid__item--half {
+      width: inherit;
+      grid-column-end: span 12;
+    }
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--third {
+    width: 31%;
+  }
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid__item--third {
+      width: inherit;
+      grid-column-end: span 8;
+    }
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--two-thirds {
+    width: 65%;
+  }
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid__item--two-thirds {
+      width: inherit;
+      grid-column-end: span 16;
+    }
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--quarter {
+    width: 23%;
+  }
+  @supports (display: grid) {
+    /* line 1, lib/assets/stylesheets/basecamp.css */
+    .grid__item--quarter {
+      width: inherit;
+      grid-column-end: span 6;
+    }
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--newline {
+    grid-column-start: 1 !important;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--small {
+    grid-column: 6 / span 10;
+  }
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--centered .grid__item--small {
+    grid-column: 8 / span 10;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--longform {
+    grid-column: 6 / span 14;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--medium {
+    grid-column: 4 / span 15;
+  }
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--centered .grid__item--medium {
+    grid-column: 5 / span 16;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item--large {
+  grid-column: 3 / -3;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--large {
+    grid-column: 4 / span 18;
+  }
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--centered .grid__item--large {
+    grid-column: 4 / span 18;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item--x-large {
+  grid-column: 2 / -2;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--x-large {
+    grid-column: 3 / span 20;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid__item--max {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--mobile-small {
+    grid-column: 4 / -4;
+  }
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--mobile-medium {
+    grid-column: 3 / -3;
+  }
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--mobile-medium {
+    grid-column: 3 / -3;
+  }
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--mobile-large {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (max-width: 37.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid__item--mobile-max {
+    grid-column: 1 / -1;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.grid--formatted > h1:not(.grid__item), .grid--formatted > .h1:not(.grid__item), .grid--formatted > h2:not(.grid__item), .grid--formatted > .h2:not(.grid__item), .grid--formatted > h3:not(.grid__item), .grid--formatted > .h3:not(.grid__item), .grid--formatted > p:not(.grid__item), .grid--formatted > ul:not(.grid__item), .grid--formatted > ol:not(.grid__item), .grid--formatted > hr:not(.grid__item), .grid--formatted > figure:not(.grid__item) {
+  grid-column: 3 / -3;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--formatted > h1:not(.grid__item), .grid--formatted > .h1:not(.grid__item), .grid--formatted > h2:not(.grid__item), .grid--formatted > .h2:not(.grid__item), .grid--formatted > h3:not(.grid__item), .grid--formatted > .h3:not(.grid__item), .grid--formatted > p:not(.grid__item), .grid--formatted > ul:not(.grid__item), .grid--formatted > ol:not(.grid__item), .grid--formatted > hr:not(.grid__item), .grid--formatted > figure:not(.grid__item) {
+    grid-column: 4 / span 15;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .grid--formatted.grid--centered > h1:not(.grid__item), .grid--formatted.grid--centered > .h1:not(.grid__item), .grid--formatted.grid--centered > h2:not(.grid__item), .grid--formatted.grid--centered > .h2:not(.grid__item), .grid--formatted.grid--centered > h3:not(.grid__item), .grid--formatted.grid--centered > .h3:not(.grid__item), .grid--formatted.grid--centered > p:not(.grid__item), .grid--formatted.grid--centered > ul:not(.grid__item), .grid--formatted.grid--centered > ol:not(.grid__item), .grid--formatted.grid--centered > hr:not(.grid__item), .grid--formatted.grid--centered > figure:not(.grid__item) {
+    grid-column: 5 / span 16;
+  }
+}
+
+@media print {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .navigation, .footer {
+    display: none !important;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.basecamp-promo {
+  margin: 4em 0 0 0;
+  padding: 2em;
+  background-color: #fbf7f0;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .basecamp-promo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 1em 2em;
+    text-align: left;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .basecamp-promo__hero {
+    width: 40%;
+  }
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .basecamp-promo__hero img {
+    max-width: 130%;
+    position: relative;
+    left: -12rem;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .basecamp-promo__text {
+    width: 60%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.basecamp-promo__headline {
+  margin-top: 0 !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.basecamp-promo__copy {
+  font-size: 85%;
+  margin-bottom: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.concierge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 500000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(251, 247, 240, 0.9);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.concierge--show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.concierge__body {
+  background-color: #fff;
+  padding: 1em;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.footer {
+  padding-bottom: 4em !important;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.hello {
+  position: relative;
+  z-index: 500;
+  padding: 0.5em;
+  margin: 1em 0;
+  border-radius: 2em;
+  background-color: #ffe000;
+  color: #1d2d35;
+  text-align: center;
+  font-size: 85%;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .hello {
+    margin: 2em 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.hello--fixed {
+  position: absolute;
+  z-index: 1000;
+  top: 8.2rem;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  font-size: 75%;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .hello--fixed {
+    position: fixed;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.banner {
+  display: none;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .banner {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0;
+    background-color: #5d2f86;
+    color: #fff;
+    text-align: center;
+    font-size: 75%;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.new-year {
+  display: none;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .new-year {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 2.25em;
+    padding: 0.5em;
+    background-color: #1d2d35;
+    background: #1d2d35 url(/assets/general/confetti-simple-92b0ed8d414447331e73aced1f8fe42db78f3292392c110986410b6baf6f76c3.svg) center center/5rem repeat;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.new-year__message {
+  background-color: #1d2d35;
+  margin: 0;
+  border-radius: 1em;
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.new-year__message a {
+  color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.star-banner {
+  display: none;
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .star-banner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: -1em 0 0.5em 0;
+    font-size: 65%;
+    font-style: italic;
+    color: #aa9c84;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .star-banner {
+    font-size: 75%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.star-banner__item {
+  margin: 0 0.5em;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.star-banner__item img {
+  width: 5em;
+  padding-bottom: 0.2em;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.project-hero {
+  margin: -6em 0 0 0;
+  position: relative;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .project-hero {
+    margin: -4.25em 0 0 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.project-hero:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  height: 2em;
+  left: 0.5em;
+  right: 0.5em;
+  top: -0.5em;
+  margin: 0;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.project-hero:after {
+  position: absolute;
+  content: '';
+  height: 6em;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  background: linear-gradient(to bottom, rgba(251, 247, 240, 0) 0%, #fbf7f0 90%);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.project-hero__screen {
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.project-hero__captions {
+  pointer-events: none;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .project-hero__captions {
+    position: absolute;
+    top: -3em;
+    left: -5em;
+    right: -5em;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    padding: 0;
+    background: url(/assets/landing/project-hero-captions-61fe90cf9e92cbfe4bea0983962787c74d7af3d6b39e8483839ae74915fb84d3.png) center top/contain no-repeat;
+  }
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .project-hero__captions--personal {
+    background: url(/assets/landing/project-personal-captions-89c7f7e7a9f225582884776892ccdffb6552a536202a8ca0ed7a96c98f1580df.png) center top/contain no-repeat;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.home-illustration {
+  margin: 0 0 -1em 0;
+}
+
+@media (min-width: 37.6em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .home-illustration {
+    margin: -1em 0 -2em 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 19000;
+  width: 100%;
+}
+
+@media print {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .header {
+    position: static;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav {
+  position: relative;
+  z-index: 19000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav--compact {
+  position: fixed;
+  top: 0.5em;
+  left: 0;
+  width: auto;
+  padding: 1rem 2rem;
+  border-radius: 2em;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media print {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .top-nav--compact {
+    position: absolute;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo {
+  display: block;
+  width: 8.25em;
+  height: 2em;
+  margin: 0;
+  padding: 0.1rem;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo .icon {
+  fill: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo .name {
+  fill: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo .card {
+  opacity: 0;
+  transform: translateX(1.25rem) rotate(10deg);
+  transition: all 0.15s ease-out;
+  fill: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo .card--back {
+  transition-delay: 0.1s;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo:hover .card {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__logo:hover .card--front {
+  opacity: 0.6;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 75%;
+  font-weight: bold;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .top-nav__list {
+    display: block;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__list-item {
+  display: inline-block;
+  margin: 0 0.25em;
+  vertical-align: middle;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__link {
+  color: #1d2d35;
+  -webkit-text-decoration-color: #fff;
+          text-decoration-color: #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__link:visited {
+  color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.top-nav__link:hover {
+  color: #1d2d35;
+  -webkit-text-decoration-color: #ffe000;
+          text-decoration-color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav {
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: 0;
+  padding: 4em 2em 2em 2em;
+  z-index: 18000;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.98);
+  font-size: 120%;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav__list-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav__link {
+  display: block;
+  padding: 1em 0;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox {
+  display: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-button {
+  position: fixed;
+  right: 2rem;
+  top: 2.5rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 20000;
+  font-size: 85%;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .mobile-nav-button {
+    display: none;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-button span {
+  transition-duration: 0s;
+  transition-delay: 0.2s;
+  display: inline-block;
+  top: -0.4rem;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #1d2d35;
+  position: relative;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-button span::after, .mobile-nav-button span::before {
+  transition-delay: 0.2s, 0s;
+  transition-duration: 0.2s;
+  transition-property: margin, transform;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-button span::before {
+  margin-top: -0.7rem;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-button span::after {
+  margin-top: 0.7rem;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox:checked ~ .mobile-nav {
+  transform: translate(0, 0);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox:checked ~ .mobile-nav-button span {
+  background-color: transparent;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox:checked ~ .mobile-nav-button span::before, .mobile-nav-checkbox:checked ~ .mobile-nav-button span::after {
+  transition-delay: 0s, 0.2s;
+  margin-top: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox:checked ~ .mobile-nav-button span::before {
+  transform: rotate(45deg);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.mobile-nav-checkbox:checked ~ .mobile-nav-button span::after {
+  transform: rotate(-45deg);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.a-screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.a-screen-reader-text:hover, .a-screen-reader-text:active, .a-screen-reader-text:focus {
+  clip: auto !important;
+  display: block;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  z-index: 100000;
+  background-color: #1d2d35;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.1em 0.1em rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.25) 50%, transparent 100%);
+  bottom: 0;
+  left: 0;
+  padding: 4rem;
+  pointer-events: none;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1000000;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking {
+    padding: 8rem;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking__container {
+  background: #725ead;
+  border-radius: 0.5rem;
+  box-shadow: 0 15px 50px 5px rgba(0, 0, 0, 0.25), 0 15px 25px 5px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 3.5rem;
+  pointer-events: auto;
+  max-width: 30ch;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking__container {
+    align-items: center;
+    display: inline-flex;
+    max-width: none;
+    padding: 4rem;
+    text-align: left;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking img {
+  display: none;
+  margin-right: 2rem;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking img {
+    display: inline-block;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking p {
+  color: #fff;
+  font-size: 85%;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking p {
+    margin: 0 5rem 0 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking button {
+  -webkit-appearance: none;
+  background: #fff;
+  border: 0;
+  color: #1d2d35;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 800;
+  line-height: 1.3;
+  outline: 0;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking button {
+    font-size: 85%;
+    padding: 0.5em 1em;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking button:hover {
+  background: #1d2d35;
+  color: #fff;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking button.deny {
+  background: none;
+  color: #fff;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .tracking button.deny {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking button.deny:hover {
+  color: #1d2d35;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.tracking--hidden {
+  display: none !important;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .video-set {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__item {
+  display: block;
+  position: relative;
+  margin: 0.5em 0 2em 0;
+  text-decoration: none;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .video-set__item {
+    width: 31%;
+    margin: 1em 0.5em;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__item:hover .video-set__title span {
+  background-color: #ffe000;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__item:hover .video-set__img:before {
+  background-color: rgba(255, 224, 0, 0.4);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__img {
+  position: relative;
+  margin: 0;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__img img {
+  display: block;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__img:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  margin: -2em 0 0 -1.25em;
+  background: rgba(255, 224, 0, 0.9) url(/assets/general/play-a990aafc006af09f0e80641333308f96a52c10be4bbe07ae8d67dfd69fe2ebef.svg) left 0.95em center/30% no-repeat;
+  border-radius: 100%;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__img:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 224, 0, 0.2);
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__text {
+  position: relative;
+  margin: -2.25em 0 0 0;
+  padding: 0 2em 0 0;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .video-set__text {
+    padding: 0 1em 0 0;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__text span {
+  padding: 0.25rem 0.5rem;
+  background-color: #fff;
+  vertical-align: middle;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__title {
+  font-size: 120%;
+  margin: 0 0 0.5em 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 57.5em) {
+  /* line 1, lib/assets/stylesheets/basecamp.css */
+  .video-set__title {
+    font-size: 100%;
+  }
+}
+
+/* line 1, lib/assets/stylesheets/basecamp.css */
+.video-set__description {
+  margin: 0;
+  font-size: 85%;
+}
