@@ -29,6 +29,33 @@
       </div>
     </div>
   </section>
+  <section class="wrapper bg-butcher-paper">
+    <div class="grid grid--centered grid--formatted centered-medium">
+      <div class="project-hero grid__item grid__item--medium">
+        <picture class="project-hero__screen">
+          <source srcset="assets/home_pages/project-remote-small.png" media="(max-width: 600px)">
+          <source srcset="assets/home_pages/project-remote-large.png" media="(min-width: 601px)"> 
+          <%= image_tag "home_pages/project-remote-large.png", loading: "lazy", alt: "here's what a My Basecamp project looks like", height: '2205', width: '1760' %>
+        </picture>
+        <div class="project-hero__captions"></div>
+      </div>
+      <h2 class="heading push_quarter--top">One place, not all over the place.</h2>
+      <p>
+        <strong>Remote work is especially challenging when</strong> 
+        stuff’s spread out across emails, file services, task managers, spreadsheets, chats, meetings, etc. 
+        Things get lost, you don’t know where to look for stuff, and people put the right information in the wrong place.
+      </p>
+      <p>
+        <strong>But when it’s all together in My Basecamp, you’ll see</strong> 
+        where everything is, understand what everyone’s working on, and know exactly where to put the next thing everyone needs to know about. 
+        Your team can access My Basecamp from anywhere - on the web, on iOS, and Android.
+        This is the modern way – The Basecamp Way to Work.
+      </p>
+      <p>
+        <strong><%= link_to "My Basecamp is different – take a deeper look at how it works >", how_it_works_path %></strong>
+      </p>
+    </div>
+  </section>
 </main>
 <footer>
   <%= render "footer" %>
