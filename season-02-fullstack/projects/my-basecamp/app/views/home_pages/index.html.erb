@@ -56,6 +56,88 @@
       </p>
     </div>
   </section>
+  <section class="wrapper">
+    <div class="grid grid--centered grid--formatted centered-medium">
+      <h2 class="heading flush--bottom">We literally wrote the book on working remotely.</h2>
+      <div class="grid__item grid__item--medium grid grid--row">
+        <div class="grid__item grid__item--third hide-mobile">
+          <%= link_to root_path do %>
+            <%= image_tag "general/remote-cover.png", loading: "lazy", alt: "REMOTE cover", height: '990', width: '726' %>
+          <% end %>
+        </div>
+        <div class="grid__item grid__item--two-thirds txt-left">
+          <p>
+            We don't just make software for remote work; we wrote a popular and influential book about working remotely too. 
+            <strong>REMOTE</strong> shows both employers and employees how they can work together, remotely, from any desk, in any place, anytime, anywhere. 
+            Avoid common pitfalls, learn best practices, and get up to speed <em>quick</em>.
+          </p>
+          <p><%= link_to "learn more about REMOTE", root_path, class: "button button--secondary" %></p>
+        </div>
+      </div>
+      <hr class="sketch-rule grid__item grid__item--x-large">
+      <h2 class="heading">Companies change for the better when they work in My Basecamp.</h2>
+      <p>Software development shops, design firms, freelancers, consultants, architects, agencies, media companies, schools, and non-profits around the world have switched to My Basecamp to <strong>fundamentally improve</strong> their project workflow.</p>
+      <div class="grid__item grid__item--medium push_double--bottom">
+        <blockquote class="review review--big">
+          <p><span>“I’ve used My Basecamp for a million projects over the last decade and a half. It's beautiful software that has resisted every wrong trend and stayed true to the things that mattered most. Highly recommended.”</span></p>
+          <cite>Sultan Kyzyltau, CEO, Crazy Creators</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“We can see exactly what needs to be done and when. We're much more efficient.”</span></p>
+          <cite>-Tina Lannin, 121 Captions</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“We've had less confusion with task responsibilities and deadlines, which has increased productivity and efficiency.”</span></p>
+          <cite>-Dale Lavine, NASA</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“Accountability for tasks. No more ‘I thought so and so was responsible for that.’”</span></p>
+          <cite>-George Groves, Piehole.TV</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“We are all collaborating more on feedback, it helps to show accountability as well.”</span></p>
+          <cite>-Samantha Silberberg, Quartz</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“We don't need to spend as much time in meetings now that we use My Basecamp.”</span></p>
+          <cite>-Brad Vandiviere, Faith Chapel Billings</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“Transparency and communication has increased.”</span></p>
+          <cite>-Joey Rosenberg, Women Who Code</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“Time management and productivity. Makes my job easier rather than having to constantly ask for progress updates.”</span></p>
+          <cite>-Kyle Jernigan, Crossroads Church</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“Greater collaboration and less Excel!”</span></p>
+          <cite>-Spencer Stevenson, 3M</cite>
+        </blockquote>
+        <blockquote class="review review--big">
+          <p><span>“Task completion! The lists and reminders help people remember what they said they were going to do and helps hold them accountable to the team.”</span></p>
+          <cite>-Scot Evans, University of Miami</cite>
+        </blockquote>
+      </div>
+      <p>
+        <strong>
+          <%= link_to "Hear from hundreds more customers about what's changed for the better since they made the switch to My Basecamp >", root_path %>
+        </strong>
+      </p>
+      <div class="grid__item grid__item--medium">
+        <p class="subheading">
+          <strong>
+            Have questions? <%= link_to "Holler", support_path %>.<br class="linebreak"> 
+            Ready to get going? Engage:
+          </strong>
+        </p>
+        <div class="cta push--top">
+          <%= link_to "Give Basecamp a Try", pricing_path, class: "button button--primary" %>
+          <p class="x-small"><span data-signups="">3,184</span> companies signed up in the last week alone!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <footer>
   <%= render "footer" %>
