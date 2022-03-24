@@ -268,18 +268,18 @@ select {
 
 .bg-butcher-paper {
   background-color: #fbf7f0;
-  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat, #fbf7f0 url(/assets/general/deckle-edge-top-9d85acf0c50449780017c5d173b40455be2a116277f45c7f177a3203dde06a40.svg) center top -0.1rem/105% no-repeat;
+  background: url(/assets/general/deckle-edge-bottom.svg) center bottom -0.1rem/105% no-repeat, #fbf7f0 url(/assets/general/deckle-edge-top.svg) center top -0.1rem/105% no-repeat;
 }
 
 .bg-butcher-paper-bottom {
   background-color: #fbf7f0;
-  background: #fbf7f0 url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat;
+  background: #fbf7f0 url(/assets/general/deckle-edge-bottom.svg) center bottom -0.1rem/105% no-repeat;
 }
 
 .bg-ink-paper {
   background-color: #1d2d35;
   color: #fff;
-  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom -0.1rem/105% no-repeat, #1d2d35 url(/assets/general/deckle-edge-top-9d85acf0c50449780017c5d173b40455be2a116277f45c7f177a3203dde06a40.svg) center top -0.1rem/105% no-repeat;
+  background: url(/assets/general/deckle-edge-bottom-5a3ce632b0af24856850327828430f447c3aade6d298231ac84b602e04ea5917.svg) center bottom -0.1rem/105% no-repeat, #1d2d35 url(/assets/general/deckle-edge-top-6de91a7bb14602b99952c1af8783d2d3f0eacba9086f093f4e9b03e45d64c9e0.svg) center top -0.1rem/105% no-repeat;
 }
 
 .button {
@@ -494,7 +494,7 @@ select {
   width: 100%;
   height: 5em;
   bottom: 0;
-  background: url(/assets/general/deckle-edge-bottom-379b6d8b81eb0c8ae6c8f7c39ab50de9cb02c54024b244014ae4700b7d33ba16.svg) center bottom/105% no-repeat;
+  background: url(/assets/general/deckle-edge-bottom-5a3ce632b0af24856850327828430f447c3aade6d298231ac84b602e04ea5917.svg) center bottom/105% no-repeat;
 }
 
 /* line 1, lib/assets/stylesheets/basecamp.css */
