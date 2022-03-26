@@ -1403,11 +1403,6 @@ video {
 }
 
 /* line 1, lib/assets/stylesheets/basecamp.css */
-.footer {
-  padding-bottom: 4em !important;
-}
-
-/* line 1, lib/assets/stylesheets/basecamp.css */
 .hello {
   position: relative;
   z-index: 500;
