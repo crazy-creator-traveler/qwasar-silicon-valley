@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "animations/crazy_creator_animation"
+import "animations/github_octocat_animation"
 
 import "popper"
 import "bootstrap"
