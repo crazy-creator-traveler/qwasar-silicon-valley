@@ -3,3 +3,43 @@
   font-size: 1.5vw;
   padding-top: 2rem;
 }
+
+.sign-in_logo-box {
+  padding-left: 25%;
+}
+
+.sign-in_logo {
+  display: block;
+  width: 8.25em;
+  height: 2em;
+  margin: 0;
+  padding: 0.1rem;
+}
+
+.sign-in_logo .icon {
+  fill: #1d2d35;
+}
+
+.sign-in_logo .name {
+  fill: #1d2d35;
+}
+
+.sign-in_logo .card {
+  opacity: 0;
+  transform: translateX(1.25rem) rotate(10deg);
+  transition: all 0.15s ease-out;
+  fill: #ffe000;
+}
+
+.sign-in_logo .card--back {
+  transition-delay: 0.1s;
+}
+
+.sign-in_logo:hover .card {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.sign-in_logo:hover .card--front {
+  opacity: 0.6;
+}
