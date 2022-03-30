@@ -16,3 +16,42 @@
   font-size: 1.5vw;
   padding: 3vh 1rem 0rem 1rem;
 }
+
+.sign-up__logo-box {
+  padding-left: 40%;
+}
+
+.sign-up_logo {
+  display: block;
+  width: 25vw;
+  margin: 0;
+  padding: 0.1rem;
+}
+
+.sign-up_logo .icon {
+  fill: #1d2d35;
+}
+
+.sign-up_logo .name {
+  fill: #1d2d35;
+}
+
+.sign-up_logo .card {
+  opacity: 0;
+  transform: translateX(1.25rem) rotate(10deg);
+  transition: all 0.15s ease-out;
+  fill: #ffe000;
+}
+
+.sign-up_logo .card--back {
+  transition-delay: 0.1s;
+}
+
+.sign-up_logo:hover .card {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.sign-up_logo:hover .card--front {
+  opacity: 0.6;
+}
