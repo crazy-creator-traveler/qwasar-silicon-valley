@@ -36,7 +36,7 @@
   <ul> 
     <li>HTML5</li>
     <li>CSS3 > Bootstrap, RedM, Sass</li>
-    <li>JavaScript</li>
+    <li>JavaScript > Lottie</li>
     <li>Ruby > Ruby on Rails, Devise</li>
     <li>Database > SQLite</li>
     <li>Git | GitHub</li>
