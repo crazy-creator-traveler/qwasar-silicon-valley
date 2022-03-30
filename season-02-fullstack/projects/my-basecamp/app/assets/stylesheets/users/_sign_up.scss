@@ -1,1 +1,18 @@
 /* CSS styles for the '/sign-up' route */
+.sign-up {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8%, 1fr));
+  grid-auto-rows: auto; 
+  grid-gap: 0.3333%;
+  max-width: 100%;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  word-wrap: break-word;
+  background-color: rgb(1, 10, 14);
+}
+
+.sign-up__form-box {
+  font-size: 1.5vw;
+  padding: 1rem 1rem 0rem 1rem;
+}
