@@ -6,6 +6,7 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   username: <%= ENV["MY_BASECAMP_DATABASE_ADMIN"] %>
   password: <%= ENV["MY_BASECAMP_DATABASE_PASSWORD"] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
