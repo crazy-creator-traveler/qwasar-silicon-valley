@@ -7,5 +7,5 @@ const animation = bodymovin.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'assets/animations/crazy_creator_animation.json'
+  path: 'https://assets6.lottiefiles.com/packages/lf20_rb69zrkk.json'
 })
