@@ -7,5 +7,5 @@ const animation = bodymovin.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'assets/animations/github_octocat_animation.json'
+  path: 'https://assets9.lottiefiles.com/packages/lf20_Cko7Sr.json'
 })
