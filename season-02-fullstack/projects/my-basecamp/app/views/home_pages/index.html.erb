@@ -33,8 +33,8 @@
     <div class="grid grid--centered grid--formatted centered-medium">
       <div class="project-hero grid__item grid__item--medium">
         <picture class="project-hero__screen">
-          <source srcset="assets/home_pages/project-remote-small.png" media="(max-width: 600px)">
-          <source srcset="assets/home_pages/project-remote-large.png" media="(min-width: 601px)"> 
+          <source srcset="<%= asset_path 'home_pages/project-remote-small.png' %>" media="(max-width: 600px)">
+          <source srcset="<%= asset_path 'home_pages/project-remote-large.png' %>" media="(min-width: 601px)"> 
           <%= image_tag "home_pages/project-remote-large.png", loading: "lazy", alt: "here's what a My Basecamp project looks like", height: '2205', width: '1760' %>
         </picture>
         <div class="project-hero__captions"></div>
