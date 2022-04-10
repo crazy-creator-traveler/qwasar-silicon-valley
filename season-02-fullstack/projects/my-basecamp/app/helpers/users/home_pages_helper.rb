@@ -1,0 +1,2 @@
+module Users::HomePagesHelper
+end
