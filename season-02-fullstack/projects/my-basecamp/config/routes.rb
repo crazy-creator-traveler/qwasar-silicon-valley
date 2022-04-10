@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     scope "/user" do
-      get "/", to: "users#index", as: :user_root
+      get "/", to: "users/home_pages#index", as: :user_root
       get "/sing-in", to: "devise/sessions#new", as: :new_user_session
       post "/sing-in", to: "devise/sessions#create", as: :user_session
       delete "/sign-out", to: "devise/sessions#destroy", as: :destroy_user_session
