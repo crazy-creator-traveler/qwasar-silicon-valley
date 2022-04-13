@@ -19,7 +19,16 @@
 <!--Getting Started-->
 <div>
   <h2>Getting Started</h2>
-  <p>Soon ...</p>
+  <ol type="1">
+    <li>
+      <h3>Try My Basecamp Online</h3>
+      <p>Go to <a href="https://my-basecamp-app.herokuapp.com">My Basecamp</a> ⚡️</p>
+    </li><br>
+    <li>
+      <h3>Installing && Running My Basecamp Locally</h3>
+      <p>Soon ...</p>
+    </li>
+  </ol>
 </div>
 <hr>
 
