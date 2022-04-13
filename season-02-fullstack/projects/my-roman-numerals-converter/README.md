@@ -29,7 +29,7 @@
         <li><h3>Installing The Software</h3>
             <ol type="1">
                 <li><b>Clone the repository</b>
-                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/crazy-creator-traveler/qwasar-silicon-valley.git</code></p>
                     <p><code>$ cd qwasar-silicon-valley</code></p>
                     <p><code>$ git sparse-checkout set season-02-fullstack/projects/my-roman-numerals-converter</code></p><br>
                 </li>

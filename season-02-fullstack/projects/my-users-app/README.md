@@ -46,7 +46,7 @@
         <li><h3>Installing && Running The Web-Application</h3></li>
             <ol type="1">
                 <li><b>Clone the repository</b></li>
-                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/Crazy-Creators-Zone/qwasar-silicon-valley.git</code></p>
+                    <p><code>$ git clone --depth 1 --filter=blob:none --sparse https://github.com/crazy-creator-traveler/qwasar-silicon-valley.git</code></p>
                     <p><code>$ cd qwasar-silicon-valley</code></p>
                     <p><code>$ git sparse-checkout set season-02-fullstack/projects/my-users-app</code></p><br>
                 <li><b>Make sure the Ruby-Programming Language is installed</b></li>
