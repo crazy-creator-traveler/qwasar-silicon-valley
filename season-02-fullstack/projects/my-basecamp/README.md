@@ -38,7 +38,8 @@
     <li>CSS3 > Bootstrap, RedM, Sass</li>
     <li>JavaScript > Lottie</li>
     <li>Ruby > Ruby on Rails, Devise</li>
-    <li>Database > SQLite</li>
+    <li>Database > PostgreSQL</li>
+    <li>Heroku</li>
     <li>Git | GitHub</li>
   </ul>
 </div>
