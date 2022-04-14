@@ -13,6 +13,11 @@
 <div>
   <h2>Project Description</h2>
   <p><b>My Basecamp</b> is web-based software that implements the Basecamp project management tool.</p><br>
+  <div>
+    <img src="app/assets/images/general/github/my-basecamp-home-page-header-part--ipad.png" alt="My Basecamp" width="200" height="250">
+    <img src="app/assets/images/general/github/my-basecamp-home-page-burger-menu--ipad.png" alt="My Basecamp" width="200" height="250">
+    <img src="app/assets/images/general/github/my-basecamp-home-page-footer-part--ipad.png" alt="My Basecamp" width="200" height="250">
+  </div>
 </div>
 <hr>
 
